@@ -17,7 +17,7 @@
 攻击条件1Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google
 攻击所需工具121.arpspoof2.driftnet
 实验步骤1234567891.获取必要IP地址Kali Linux 使用ifconfig 命令查看本地IP以及网关地址OS">
-<meta property="og:updated_time" content="2016-02-29T09:48:52.000Z">
+<meta property="og:updated_time" content="2016-02-29T09:57:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内网图片获取">
 <meta name="twitter:description" content="环境搭建12攻击:VMware Fusion--虚拟机Kali Linux受害机:本机 系统: OS X EI Capitan
@@ -268,6 +268,7 @@
 <h3 id="攻击所需工具"><a href="#攻击所需工具" class="headerlink" title="攻击所需工具"></a>攻击所需工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.arpspoof</span><br><span class="line"><span class="number">2</span>.driftnet</span><br></pre></td></tr></table></figure>
 <h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.获取必要IP地址</span><br><span class="line">Kali Linux 使用ifconfig 命令查看本地IP以及网关地址</span><br><span class="line">OS X 地址</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.使用Arpspoof -i eth0 -t <span class="number">192.168</span>.<span class="number">1.1</span> <span class="number">192.168</span>.<span class="number">1.111</span></span><br><span class="line">这边解释一下,eth0为Kali Linux本地网卡设备,<span class="number">192.168</span>.<span class="number">1.1</span>为我的网关地址, <span class="number">192.168</span>.<span class="number">1.111</span> 为OS X（受害者地址）</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.driftnet -i eth0 用来获取受害者图片</span><br><span class="line">这条命令执行完成后会弹出窗口，如果那时候受害者正在浏览图片，那么这个窗口就会显示相应图片，这样子 如果一个妹子和你正在同一个局域网内，而恰好她正在浏览自己的私密相册，那么嘿嘿嘿...至于嘿嘿嘿是什么我就不细说了，zzz</span><br></pre></td></tr></table></figure>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个测试还是可以自己动手玩玩的，其实其中的原理也相当简单，就是简单的ARP欺骗，但是还是挺好用的zz...</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://weibo.com/styhunger" target="_blank" rel="external">Weibo</a></p>
 
       
     </div>
@@ -279,7 +280,7 @@
         <p><span>本文标题:</span><a href="/2016/02/29/内网图片获取/">内网图片获取</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
         <p><span>发布时间:</span>2016年02月29日 - 17时25分</p>
-        <p><span>最后更新:</span>2016年02月29日 - 17时48分</p>
+        <p><span>最后更新:</span>2016年02月29日 - 17时57分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/02/29/内网图片获取/" title="内网图片获取">http://yoursite.com/2016/02/29/内网图片获取/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/02/29/内网图片获取/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
