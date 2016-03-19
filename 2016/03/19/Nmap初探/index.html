@@ -11,7 +11,8 @@
 <meta property="og:url" content="http://0daybug.github.io/2016/03/19/Nmap初探/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
 <meta property="og:description" content="写在前面的话1234567  来这边信通工作了也快一个多月了，逐步习惯了工作的节奏，第一次从吉林出差回南京，原计划休息一小段时间，但是同事那边（国网要准备突击检查）忙不过来，So...周六周日也跟着加班了，和之前一样工作的内容很简单，主要是找人找设备比较麻烦，还有领导指导的要求又随时会变，比如今天突然就要求整理出系统中所有存活主机的IP我去，这么多IP怎么找...于是想起来以前用过一点的神器Nma">
-<meta property="og:updated_time" content="2016-03-19T11:21:01.000Z">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/150581565.jpg">
+<meta property="og:updated_time" content="2016-03-19T12:56:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nmap初探">
 <meta name="twitter:description" content="写在前面的话1234567  来这边信通工作了也快一个多月了，逐步习惯了工作的节奏，第一次从吉林出差回南京，原计划休息一小段时间，但是同事那边（国网要准备突击检查）忙不过来，So...周六周日也跟着加班了，和之前一样工作的内容很简单，主要是找人找设备比较麻烦，还有领导指导的要求又随时会变，比如今天突然就要求整理出系统中所有存活主机的IP我去，这么多IP怎么找...于是想起来以前用过一点的神器Nma">
@@ -254,6 +255,7 @@
 <h3 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  原本以为在OS X 系统中没有Nmap，于是我就搬到Kali Linux的生产环境中去搞，</span><br><span class="line">Damn！，最后在网上找到了快捷安装的方法</span><br><span class="line"></span><br><span class="line">具体<span class="string">'brew install nmap'</span>就好了 - -！</span><br></pre></td></tr></table></figure>
 <h3 id="今天的具体实战"><a href="#今天的具体实战" class="headerlink" title="今天的具体实战"></a>今天的具体实战</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">其实真的很简单，寻找内网存活主机的数量和IP地址只需要一道命令即可</span><br><span class="line"><span class="string">'nmap -sP 192.168.1.0-24'</span> 举这个例子（扫描所有一网段存活主机）</span><br><span class="line">拓展一下 nmap其实还支持文件输出 只需要在后面加参数 -oX 文件名.xml</span><br><span class="line">注意：前面是字母的o不是数字<span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h3 id="拓展链接"><a href="#拓展链接" class="headerlink" title="拓展链接"></a>拓展链接</h3><p><a href="https://nmap.org/" target="_blank" rel="external">Nmap</a></p>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/150581565.jpg" alt=""></p>
 
       
     </div>
@@ -265,7 +267,7 @@
         <p><span>本文标题:</span><a href="/2016/03/19/Nmap初探/">Nmap初探</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
         <p><span>发布时间:</span>2016年03月19日 - 19时02分</p>
-        <p><span>最后更新:</span>2016年03月19日 - 19时21分</p>
+        <p><span>最后更新:</span>2016年03月19日 - 20时56分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/19/Nmap初探/" title="Nmap初探">http://0daybug.github.io/2016/03/19/Nmap初探/</a>
             <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/03/19/Nmap初探/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
