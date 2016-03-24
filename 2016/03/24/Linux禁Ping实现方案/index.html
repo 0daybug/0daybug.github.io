@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>Linux禁Ping实现方案 | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:url" content="http://0daybug.github.io/archives/index.html">
+  <meta name="description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
+利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux禁Ping实现方案">
+<meta property="og:url" content="http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description">
+<meta property="og:description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
+利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
+<meta property="og:updated_time" content="2016-03-24T04:07:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Linux禁Ping实现方案">
+<meta name="twitter:description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
+利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -36,8 +40,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -215,204 +219,215 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Linux禁Ping实现方案" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/24/Linux禁Ping实现方案/" class="archive-article-date">
-      <time datetime="2016-03-24T03:18:19.000Z" itemprop="datePublished">03-24</time>
+    <div class="article-meta">
+      <a href="/2016/03/24/Linux禁Ping实现方案/" class="article-date">
+      <time datetime="2016-03-24T03:18:19.000Z" itemprop="datePublished">2016-03-24</time>
 </a>
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/24/Linux禁Ping实现方案/">Linux禁Ping实现方案</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux禁Ping实现方案
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="更改文件方法"><a href="#更改文件方法" class="headerlink" title="更改文件方法"></a>更改文件方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个方法需要root权限</span><br><span class="line">禁止<span class="string">'echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br><span class="line">恢复<span class="string">'echo 0 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br></pre></td></tr></table></figure>
+<h3 id="利用iptables方法"><a href="#利用iptables方法" class="headerlink" title="利用iptables方法"></a>利用iptables方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">禁止<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j DROP'</span></span><br><span class="line">恢复<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j ACCEPT'</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/19/Nmap初探/" class="archive-article-date">
-      <time datetime="2016-03-19T11:02:29.000Z" itemprop="datePublished">03-19</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/19/Nmap初探/">Nmap初探</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Information-Gathering/">Information Gathering</a></li></ul>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/24/Linux禁Ping实现方案/">Linux禁Ping实现方案</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
+        <p><span>发布时间:</span>2016年03月24日 - 11时18分</p>
+        <p><span>最后更新:</span>2016年03月24日 - 12时07分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/24/Linux禁Ping实现方案/" title="Linux禁Ping实现方案">http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/19/Nmap初探/">
+                    Nmap初探
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更改文件方法"><span class="toc-number">1.</span> <span class="toc-text">更改文件方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用iptables方法"><span class="toc-number">2.</span> <span class="toc-text">利用iptables方法</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+    <div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/17/Metasploit01/" class="archive-article-date">
-      <time datetime="2016-03-17T11:54:15.000Z" itemprop="datePublished">03-17</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/17/Metasploit01/">Metasploit01</a>
-    </h1>
+  <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="Linux禁Ping实现方案" data-title="Linux禁Ping实现方案" data-url="http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"k0da"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-archive">
-          
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/19/Nmap初探/" title="下一篇: Nmap初探">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/16/hello-world/" class="archive-article-date">
-      <time datetime="2016-03-16T15:15:07.000Z" itemprop="datePublished">03-16</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/16/hello-world/">Hello World</a>
-    </h1>
-  
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/Linux禁Ping实现方案/">Linux禁Ping实现方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/19/Nmap初探/">Nmap初探</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/Metasploit01/">Metasploit01</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/16/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/29/内网图片获取/">内网图片获取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/28/渗透测试流程/">渗透测试流程</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
-        <div class="article-info info-on-archive">
-          
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/02/29/内网图片获取/" class="archive-article-date">
-      <time datetime="2016-02-29T09:25:27.000Z" itemprop="datePublished">02-29</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/29/内网图片获取/">内网图片获取</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/02/28/渗透测试流程/" class="archive-article-date">
-      <time datetime="2016-02-28T01:50:34.000Z" itemprop="datePublished">02-28</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/28/渗透测试流程/">渗透测试流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
@@ -485,17 +500,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
