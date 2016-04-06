@@ -3,21 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Linux禁Ping实现方案 | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>Netcat | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
-利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
+  <meta name="description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
+Usage1root@kali:~#nc -h
+
+Check">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux禁Ping实现方案">
-<meta property="og:url" content="http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/index.html">
+<meta property="og:title" content="Netcat">
+<meta property="og:url" content="http://0daybug.github.io/2016/04/06/Netcat/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
-利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
-<meta property="og:updated_time" content="2016-03-24T04:07:43.000Z">
+<meta property="og:description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
+Usage1root@kali:~#nc -h
+
+Check">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/netcat.png">
+<meta property="og:updated_time" content="2016-04-06T10:58:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux禁Ping实现方案">
-<meta name="twitter:description" content="更改文件方法123这个方法需要root权限禁止&apos;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;恢复&apos;echo 0 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&apos;
-利用iptables方法12禁止&apos;iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j">
+<meta name="twitter:title" content="Netcat">
+<meta name="twitter:description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
+Usage1root@kali:~#nc -h
+
+Check">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -219,11 +226,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Linux禁Ping实现方案" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Netcat" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/24/Linux禁Ping实现方案/" class="article-date">
-      <time datetime="2016-03-24T03:18:19.000Z" itemprop="datePublished">2016-03-24</time>
+      <a href="/2016/04/06/Netcat/" class="article-date">
+      <time datetime="2016-04-06T10:43:26.000Z" itemprop="datePublished">2016-04-06</time>
 </a>
     </div>
   
@@ -236,7 +243,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Linux禁Ping实现方案
+      Netcat
     </h1>
   
 
@@ -247,7 +254,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,8 +264,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="更改文件方法"><a href="#更改文件方法" class="headerlink" title="更改文件方法"></a>更改文件方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个方法需要root权限</span><br><span class="line">禁止<span class="string">'echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br><span class="line">恢复<span class="string">'echo 0 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br></pre></td></tr></table></figure>
-<h3 id="利用iptables方法"><a href="#利用iptables方法" class="headerlink" title="利用iptables方法"></a>利用iptables方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">禁止<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j DROP'</span></span><br><span class="line">恢复<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j ACCEPT'</span></span><br></pre></td></tr></table></figure>
+        <h3 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h3><h2 id="The-Swiss-Army-Knife-of-TCP-IP-Connections"><a href="#The-Swiss-Army-Knife-of-TCP-IP-Connections" class="headerlink" title="The Swiss Army Knife of TCP/IP Connections"></a>The Swiss Army Knife of TCP/IP Connections</h2><p>   As the man page notes, the Netcat tool is known as the Swiss Army knife<br> for TCP/IP connections. It’s a versatile tool.</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -h</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/netcat.png" alt=""></p>
+<h3 id="Check-to-see-if-a-port-is-listening"><a href="#Check-to-see-if-a-port-is-listening" class="headerlink" title="Check to see if a port is listening"></a>Check to see if a port is listening</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -v [target ip address] [port]</span></span><br><span class="line"></span><br><span class="line">example:</span><br><span class="line">nc -v <span class="number">192.168</span>.<span class="number">130.133</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
+<p>You can also use the following command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -lvp 1234</span></span><br><span class="line">listening on [any] <span class="number">1234</span>....</span><br></pre></td></tr></table></figure></p>
+<p>You use the options l for listen, v for verbose,and p to spcify the port to listen on</p>
 
       
     </div>
@@ -267,13 +278,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/24/Linux禁Ping实现方案/">Linux禁Ping实现方案</a></p>
+        <p><span>本文标题:</span><a href="/2016/04/06/Netcat/">Netcat</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年03月24日 - 11时18分</p>
-        <p><span>最后更新:</span>2016年03月24日 - 12时07分</p>
+        <p><span>发布时间:</span>2016年04月06日 - 18时43分</p>
+        <p><span>最后更新:</span>2016年04月06日 - 18时58分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/24/Linux禁Ping实现方案/" title="Linux禁Ping实现方案">http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/06/Netcat/" title="Netcat">http://0daybug.github.io/2016/04/06/Netcat/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/04/06/Netcat/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -286,16 +297,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/28/C语言短路现象/">
-                    C语言短路现象
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/19/Nmap初探/">
-                    Nmap初探
+                <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/">
+                    Kali Linux source file and install vsftpd
                 </a>
             </div>
         
@@ -306,7 +311,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更改文件方法"><span class="toc-number">1.</span> <span class="toc-text">更改文件方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用iptables方法"><span class="toc-number">2.</span> <span class="toc-text">利用iptables方法</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Brief"><span class="toc-number">1.</span> <span class="toc-text">Brief</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Swiss-Army-Knife-of-TCP-IP-Connections"><span class="toc-number"></span> <span class="toc-text">The Swiss Army Knife of TCP/IP Connections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-to-see-if-a-port-is-listening"><span class="toc-number">2.</span> <span class="toc-text">Check to see if a port is listening</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -370,7 +375,7 @@
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Linux禁Ping实现方案" data-title="Linux禁Ping实现方案" data-url="http://0daybug.github.io/2016/03/24/Linux禁Ping实现方案/"></div>
+    <div class="ds-thread" data-thread-key="Netcat" data-title="Netcat" data-url="http://0daybug.github.io/2016/04/06/Netcat/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -394,15 +399,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/28/C语言短路现象/" title="上一篇: C语言短路现象">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/03/19/Nmap初探/" title="下一篇: Nmap初探">
+            <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/" title="下一篇: Kali Linux source file and install vsftpd">
                 <i class="fa fa-angle-right"></i>
             </a>
         
