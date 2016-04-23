@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Metasploit01 | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>Windows克隆Administrator账户实验 | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="before we use Metasploit12Use the following command to open the postgresql service&apos;service postgresql start&apos;
-Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwareThe location of Met">
+  <meta name="description" content="Windows克隆Administrator账户12前提这只是一个小型实验，目的在于克隆Windows的超级管理员。主要利用原理是利用SID （Security Identifier）获取权限
+实验流程1234561.CMD 添加账户“net user linet$ 123 /add”2.CMD 打开regedt32对HKEY_LOCAL_MACHINE\SAM中adminstrator权限设置成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Metasploit01">
-<meta property="og:url" content="http://0daybug.github.io/2016/03/17/Metasploit01/index.html">
+<meta property="og:title" content="Windows克隆Administrator账户实验">
+<meta property="og:url" content="http://0daybug.github.io/2016/04/23/Windows克隆Administrator账户实验/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="before we use Metasploit12Use the following command to open the postgresql service&apos;service postgresql start&apos;
-Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwareThe location of Met">
-<meta property="og:updated_time" content="2016-03-17T12:14:45.000Z">
+<meta property="og:description" content="Windows克隆Administrator账户12前提这只是一个小型实验，目的在于克隆Windows的超级管理员。主要利用原理是利用SID （Security Identifier）获取权限
+实验流程1234561.CMD 添加账户“net user linet$ 123 /add”2.CMD 打开regedt32对HKEY_LOCAL_MACHINE\SAM中adminstrator权限设置成">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/reg32.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/register.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/regcont.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/remote.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/remotesuccess.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/timg.jpeg">
+<meta property="og:updated_time" content="2016-04-23T15:04:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Metasploit01">
-<meta name="twitter:description" content="before we use Metasploit12Use the following command to open the postgresql service&apos;service postgresql start&apos;
-Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwareThe location of Met">
+<meta name="twitter:title" content="Windows克隆Administrator账户实验">
+<meta name="twitter:description" content="Windows克隆Administrator账户12前提这只是一个小型实验，目的在于克隆Windows的超级管理员。主要利用原理是利用SID （Security Identifier）获取权限
+实验流程1234561.CMD 添加账户“net user linet$ 123 /add”2.CMD 打开regedt32对HKEY_LOCAL_MACHINE\SAM中adminstrator权限设置成">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -219,11 +225,11 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Metasploit01" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Windows克隆Administrator账户实验" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/17/Metasploit01/" class="article-date">
-      <time datetime="2016-03-17T11:54:15.000Z" itemprop="datePublished">2016-03-17</time>
+      <a href="/2016/04/23/Windows克隆Administrator账户实验/" class="article-date">
+      <time datetime="2016-04-23T14:24:07.000Z" itemprop="datePublished">2016-04-23</time>
 </a>
     </div>
   
@@ -236,7 +242,7 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
         
   
     <h1 class="article-title" itemprop="name">
-      Metasploit01
+      Windows克隆Administrator账户实验
     </h1>
   
 
@@ -247,7 +253,7 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,13 +263,16 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="before-we-use-Metasploit"><a href="#before-we-use-Metasploit" class="headerlink" title="before we use Metasploit"></a>before we use Metasploit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Use the following <span class="built_in">command</span> to open the postgresql service</span><br><span class="line"><span class="string">'service postgresql start'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Open-the-Metasploit-software"><a href="#Open-the-Metasploit-software" class="headerlink" title="Open the Metasploit software"></a>Open the Metasploit software</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Use the <span class="string">'msfconsole'</span> to open the software</span><br><span class="line">The location of Metasploit is</span><br><span class="line"> /usr/share/metasploit-framework/msfconsole</span><br></pre></td></tr></table></figure>
-<h3 id="Help-function-in-Metasploit"><a href="#Help-function-in-Metasploit" class="headerlink" title="Help function in Metasploit"></a>Help function in Metasploit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'msfconsole -h'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Find-system-hole-by-name"><a href="#Find-system-hole-by-name" class="headerlink" title="Find system hole by name"></a>Find system hole by name</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search name:mysql'</span></span><br><span class="line">msf &gt; search name:mysql</span><br><span class="line"></span><br><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   Name                                               Disclosure Date  Rank       Description</span><br><span class="line">   ----                                               ---------------  ----       -----------</span><br><span class="line">   auxiliary/admin/mysql/mysql_enum                                    normal     MySQL Enumeration Module</span><br><span class="line">   auxiliary/admin/mysql/mysql_sql                                     normal     MySQL SQL Generic Query</span><br><span class="line">   auxiliary/analyze/jtr_mysql_fast                                    normal     John the Ripper MySQL Password Cracker (Fast Mode)</span><br><span class="line">   auxiliary/scanner/mysql/mysql_authbypass_hashdump  <span class="number">2012</span>-<span class="number">06</span>-<span class="number">09</span>       normal     MySQL Authentication Bypass Password Dump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_file_enum                             normal     MYSQL File/Directory Enumerator</span><br><span class="line">   auxiliary/scanner/mysql/mysql_hashdump                              normal     MYSQL Password Hashdump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_login                                 normal     MySQL Login Utility</span><br><span class="line">   auxiliary/scanner/mysql/mysql_schemadump                            normal     MYSQL Schema Dump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_version                               normal     MySQL Server Version Enumeration</span><br><span class="line">   auxiliary/server/capture/mysql                                      normal     Authentication Capture: MySQL</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_getname            <span class="number">2010</span>-<span class="number">01</span>-<span class="number">25</span>       good       MySQL yaSSL CertDecoder::GetName Buffer Overflow</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_hello              <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       good       MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/windows/mysql/mysql_mof                    <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows MOF Execution</span><br><span class="line">   exploit/windows/mysql/mysql_payload                <span class="number">2009</span>-<span class="number">01</span>-<span class="number">16</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows Payload Execution</span><br><span class="line">   exploit/windows/mysql/mysql_start_up               <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows FILE Privilege Abuse</span><br><span class="line">   exploit/windows/mysql/mysql_yassl_hello            <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       average    MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/windows/mysql/scrutinizer_upload_<span class="built_in">exec</span>      <span class="number">2012</span>-<span class="number">07</span>-<span class="number">27</span>       excellent  Plixer Scrutinizer NetFlow and sFlow Analyzer <span class="number">9</span> Default MySQL Credential</span><br></pre></td></tr></table></figure>
-<h3 id="Find-system-hole-by-platform"><a href="#Find-system-hole-by-platform" class="headerlink" title="Find system hole by platform"></a>Find system hole by platform</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search platform：mysql'</span></span><br><span class="line">msf &gt;search platform:mysql</span><br><span class="line"></span><br><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   Name                                          Disclosure Date  Rank       Description</span><br><span class="line">   ----                                          ---------------  ----       -----------</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_getname       <span class="number">2010</span>-<span class="number">01</span>-<span class="number">25</span>       good       MySQL yaSSL CertDecoder::GetName Buffer Overflow</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_hello         <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       good       MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/multi/http/manage_engine_dc_pmp_sqli  <span class="number">2014</span>-<span class="number">06</span>-<span class="number">08</span>       excellent  ManageEngine Desktop Central / Password Manager LinkViewFetchServlet.dat SQL Injection</span><br><span class="line">   exploit/windows/mysql/mysql_mof               <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows MOF Execution</span><br><span class="line">   exploit/windows/mysql/mysql_start_up          <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows FILE Privilege Abuse</span><br><span class="line">   exploit/windows/mysql/mysql_yassl_hello       <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       average    MySQL yaSSL SSL Hello Message Buffer Overflow</span><br></pre></td></tr></table></figure>
-<h3 id="Search-by-type"><a href="#Search-by-type" class="headerlink" title="Search by type"></a>Search by type</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search type：post'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Search-by-author"><a href="#Search-by-author" class="headerlink" title="Search by author"></a>Search by author</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search author：dookie'</span></span><br></pre></td></tr></table></figure>
+        <h3 id="Windows克隆Administrator账户"><a href="#Windows克隆Administrator账户" class="headerlink" title="Windows克隆Administrator账户"></a>Windows克隆Administrator账户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前提这只是一个小型实验，目的在于克隆Windows的超级管理员。</span><br><span class="line">主要利用原理是利用SID （Security Identifier）获取权限</span><br></pre></td></tr></table></figure>
+<h2 id="实验流程"><a href="#实验流程" class="headerlink" title="实验流程"></a>实验流程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.CMD 添加账户</span><br><span class="line">“net user linet$ <span class="number">123</span> /add”</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.CMD 打开regedt32</span><br><span class="line">对HKEY_LOCAL_MACHINE\SAM中adminstrator权限设置成full control</span><br><span class="line">见下图</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/reg32.png" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>.CMD 打开regedit</span><br><span class="line">查看Adminstrator和linet$用户对应的reg值，然后导出来</span><br><span class="line">我这边将其三个文件导出来分别为 linet.reg <span class="number">000003</span>EB.reg <span class="number">000001</span>F4.reg</span><br><span class="line">其中<span class="number">000003</span>EB.reg对应linet$用户，<span class="number">000001</span>F4.reg对应Adminstrator</span><br><span class="line">详细如下图</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/register.png" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>.用notepad打开<span class="number">000003</span>EB.reg <span class="number">000001</span>F4.reg，将<span class="number">000001</span>F4.reg中下图红色框内容覆盖<span class="number">000003</span>EB.reg对应位置</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/regcont.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>.CMD 删除linet$账户</span><br><span class="line">“net user linet$ /del”</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>.分别执行linet.reg <span class="number">000003</span>EB.reg注册表</span><br><span class="line">次序别错，虽然我不知道错了会有什么影响，总之没试过，ZZ</span><br><span class="line"></span><br><span class="line"><span class="number">7</span>.CMD下给linet$加上密码</span><br><span class="line"><span class="string">"net user linet$ 123"</span></span><br><span class="line"></span><br><span class="line"><span class="number">8</span>.远程登录测试</span><br><span class="line">如下图</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/remote.png" alt=""><br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/remotesuccess.png" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">这个Test其实最关键的原理其实是抓住了SID，Windows按照SID来区别</span><br><span class="line">用户的，不是按照用户的账户名称，我们利用这点复制了Adminstrator</span><br><span class="line">的权限，所以我们用linet$账户进行远程登录的时候会看到和Adminstrator</span><br><span class="line">登录时候一样的桌面。因为权限是一样的，还有其实一般黑客喜欢用Guest克隆账户，为什么呢？</span><br><span class="line">这是因为在GUI中看不到多余的账户，一般谨慎一点的操作系统管理会比较</span><br><span class="line">注意有没有多余账户，net user这样方式创建账户时候即使加了$符号</span><br><span class="line">在cmd中看不到但是在GUI中还是可以看到的！所以这也是为什么黑客喜欢</span><br><span class="line">使用Guest账户克隆的原因，这也就解释了为什么在等保测试中需要对</span><br><span class="line">Adminstrator账户，Guest账户进行改名！（注意这两个账户是无法删除的）</span><br></pre></td></tr></table></figure>
+<p>撒有哪啦，不扯犊子了 ，继续看视频去了 ZZ…<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/timg.jpeg" alt=""></p>
 
       
     </div>
@@ -272,13 +281,13 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/17/Metasploit01/">Metasploit01</a></p>
+        <p><span>本文标题:</span><a href="/2016/04/23/Windows克隆Administrator账户实验/">Windows克隆Administrator账户实验</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年03月17日 - 19时54分</p>
-        <p><span>最后更新:</span>2016年03月17日 - 20时14分</p>
+        <p><span>发布时间:</span>2016年04月23日 - 22时24分</p>
+        <p><span>最后更新:</span>2016年04月23日 - 23时04分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/17/Metasploit01/" title="Metasploit01">http://0daybug.github.io/2016/03/17/Metasploit01/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/03/17/Metasploit01/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/23/Windows克隆Administrator账户实验/" title="Windows克隆Administrator账户实验">http://0daybug.github.io/2016/04/23/Windows克隆Administrator账户实验/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/04/23/Windows克隆Administrator账户实验/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -291,16 +300,10 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/19/Nmap初探/">
-                    Nmap初探
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/16/hello-world/">
-                    Hello World
+                <a href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/">
+                    Hack Windows 10-8-8.1-7 With Metasploit
                 </a>
             </div>
         
@@ -311,7 +314,7 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#before-we-use-Metasploit"><span class="toc-number">1.</span> <span class="toc-text">before we use Metasploit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-the-Metasploit-software"><span class="toc-number">2.</span> <span class="toc-text">Open the Metasploit software</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Help-function-in-Metasploit"><span class="toc-number">3.</span> <span class="toc-text">Help function in Metasploit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-system-hole-by-name"><span class="toc-number">4.</span> <span class="toc-text">Find system hole by name</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-system-hole-by-platform"><span class="toc-number">5.</span> <span class="toc-text">Find system hole by platform</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search-by-type"><span class="toc-number">6.</span> <span class="toc-text">Search by type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search-by-author"><span class="toc-number">7.</span> <span class="toc-text">Search by author</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows克隆Administrator账户"><span class="toc-number">1.</span> <span class="toc-text">Windows克隆Administrator账户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验流程"><span class="toc-number"></span> <span class="toc-text">实验流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number"></span> <span class="toc-text">总结</span></a>
 </div>
 <style>
     .left-col .switch-btn {
@@ -375,7 +378,7 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Metasploit01" data-title="Metasploit01" data-url="http://0daybug.github.io/2016/03/17/Metasploit01/"></div>
+    <div class="ds-thread" data-thread-key="Windows克隆Administrator账户实验" data-title="Windows克隆Administrator账户实验" data-url="http://0daybug.github.io/2016/04/23/Windows克隆Administrator账户实验/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -399,15 +402,13 @@ Open the Metasploit software123Use the &apos;msfconsole&apos; to open the softwa
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/19/Nmap初探/" title="上一篇: Nmap初探">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/03/16/hello-world/" title="下一篇: Hello World">
+            <a href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/" title="下一篇: Hack Windows 10-8-8.1-7 With Metasploit">
                 <i class="fa fa-angle-right"></i>
             </a>
         
