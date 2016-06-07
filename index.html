@@ -247,7 +247,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>‘’’bash<br>list中指定位置增加元素</p>
+        <h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>list中指定位置增加元素</p>
 <p>name.insert(1, “hello”) 表示在name的第1元素后加入 （从第0开始计算）<br>append表示在最后追加</p>
 <p>name.remove(“hello”) 删除hello</p>
 <p>pop方法 弹出<br>List.pop(0) 弹出第0号元素</p>
@@ -258,30 +258,15 @@
 <p>我们看到其中list中嵌套的list值都改变了，是因为里面的list为共享数据！</p>
 <p>我们创建name的时候，python在内存里面的一个地址存入了name，并且name里的list也是会被分配一个地址<br>但是我们在进行copy操作的时候，我们原封不动的取了name的元素作为新的list，但是原来name里面的list地址还是指向原先的<br>内部list地址，所以后面我们在对name的内部list进行更改的时候，同样name1中的内部list也会受到影响！</p>
 <p>我们利用python中的id方法来验证这点！<br>like$python3<br>Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)<br>[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin<br>Type “help”, “copyright”, “credits” or “license” for more information.</p>
-<blockquote>
-<blockquote>
-<p>&gt;<br>&gt;<br>&gt;</p>
-<blockquote>
-<p>list1 = [1,2,[1,2,3]]</p>
-<p>list2 = list1.copy()</p>
+<p>list1 = [1,2,[1,2,3]]<br>list2 = list1.copy()</p>
 <p>id(list1)<br>4313896776<br>id(list2)<br>4313896456<br>id(list1[2])<br>4313896520<br>id(list2[2])<br>4313896520</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p> 深COPY</p>
+<p>深COPY</p>
 <p>name = [‘alex’,’jack’,[1,2,3,34]]<br>name1 = name.deepcopy()<br>name1[0] = ‘ALEX’<br>name1[2][1] = 11111</p>
 <p>则完全copy一份数据</p>
-<blockquote>
-<blockquote>
-<p>&gt;</p>
-<blockquote>
 <p>import copy<br>list3 = copy.deepcopy(list1)<br>id(list3)<br>4314698952<br>id(list3[2])<br>4314754312</p>
-</blockquote>
-</blockquote>
-</blockquote>
 <p>Sort()方法在Python2和Python3中的不同</p>
 <p>Python3中不允许数字和字符串进行sort<br>Python2中是可以的，具体排序是按照对应的ASCII码进行排序，数字在前，字母在后</p>
-<p>index()返回下标<br>count()返回数量<br>extend()拓展<br>append()追加<br>‘’’</p>
+<p>index()返回下标<br>count()返回数量<br>extend()拓展<br>append()追加</p>
 
       
     </div>
