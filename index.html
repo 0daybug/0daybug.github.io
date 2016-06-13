@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
+                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 10px;">Understanding Network Hacks</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,132 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-using-cmd-on-WIndows-to-set-interface-on-DHCP-mode" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/" class="article-date">
+      <time datetime="2016-06-13T11:25:40.000Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/">using cmd on WIndows to set interface on DHCP mode</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="设置本地网卡DHCP模式"><a href="#设置本地网卡DHCP模式" class="headerlink" title="设置本地网卡DHCP模式"></a>设置本地网卡DHCP模式</h3><p>netsh interface ip set address name=”本地连接” source=dhcp</p>
+<p>本地连接为想要设置的网卡</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乱七八糟/">乱七八糟</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Understanding-Network-Hacks-Scapy" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/" class="article-date">
+      <time datetime="2016-06-12T03:04:10.000Z" itemprop="datePublished">2016-06-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/12/Understanding-Network-Hacks-Scapy/">Understanding Network Hacks--Scapy</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="0x01-Scapy"><a href="#0x01-Scapy" class="headerlink" title="0x01 Scapy"></a>0x01 Scapy</h3><p>The default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!<br>I tried once to set up the environment on OS X but eventually i just failed. It seems to<br>be the libdnet problem. I tried a lot of ways to fixed this probem. God damn it, i just<br>can’t fix it. if you can solve this problem pls let me know!</p>
+<p>alright. let’s get started with scapy</p>
+<h2 id="first-create-a-packet-using-scapy"><a href="#first-create-a-packet-using-scapy" class="headerlink" title="first. create a packet using scapy"></a>first. create a packet using scapy</h2><blockquote>
+<blockquote>
+<blockquote>
+<p>a=IP(ttl=10)<br>a<br>&lt; IP ttl=10 |&gt;<br>a.src<br>’127.0.0.1’<br>a.dst=”192.168.1.1”<br>a<br>&lt; IP ttl=10 dst=192.168.1.1 |&gt;<br>a.src<br>’192.168.8.14’<br>del(a.ttl)<br>a<br>&lt; IP dst=192.168.1.1 |&gt;<br>a.ttl<br>64</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>as we can see the default ttl is 64.</p>
+<h2 id="stack-up-layers-according-to-the-OSI-model"><a href="#stack-up-layers-according-to-the-OSI-model" class="headerlink" title="stack up layers according to the OSI model"></a>stack up layers according to the OSI model</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-ARP-cache-Poisoning" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -744,132 +870,6 @@ if packet[ARP].op == 1:
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://blogs.technet.microsoft.com/srd/2008/10/23/more-detail-about-ms08-067-the-out-of-band-netapi32-dll-security-update/" target="_blank" rel="external">Netapi32.dll and MS08-067</a></p>
 <p><a href="http://www.rapid7.com/db/modules/" target="_blank" rel="external">Rapid7</a></p>
 <h2 id="Results-from-Metasploit"><a href="#Results-from-Metasploit" class="headerlink" title="Results from Metasploit"></a>Results from Metasploit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; info exploit/windows/smb/ms08_067_netapi</span><br><span class="line"></span><br><span class="line">  Name: MS08-<span class="number">067</span> Microsoft Server Service Relative Path Stack Corruption</span><br><span class="line">   Module: exploit/windows/smb/ms08_067_netapi</span><br><span class="line">   Platform: Windows</span><br><span class="line">   Privileged: Yes</span><br><span class="line">   License: Metasploit Framework License (BSD)</span><br><span class="line">   Rank: Great</span><br><span class="line">  Disclosed: <span class="number">2008</span>-<span class="number">10</span>-<span class="number">28</span></span><br><span class="line"></span><br><span class="line">Provided by:</span><br><span class="line">  hdm &lt;x@hdm.io&gt;</span><br><span class="line">  Brett Moore &lt;brett.moore@insomniasec.com&gt;</span><br><span class="line">  frank2 &lt;frank2@dc949.org&gt;</span><br><span class="line">  jduck &lt;jduck@metasploit.com&gt;</span><br><span class="line"></span><br><span class="line">Available targets:</span><br><span class="line">  Id  Name</span><br><span class="line">  --  ----</span><br><span class="line">  <span class="number">0</span>   Automatic Targeting</span><br><span class="line">  <span class="number">1</span>   Windows <span class="number">2000</span> Universal</span><br><span class="line">  <span class="number">2</span>   Windows XP SP0/SP1 Universal</span><br><span class="line">  <span class="number">3</span>   Windows <span class="number">2003</span> SP0 Universal</span><br><span class="line">  <span class="number">4</span>   Windows XP SP2 English (AlwaysOn NX)</span><br><span class="line">  <span class="number">5</span>   Windows XP SP2 English (NX)</span><br><span class="line">  <span class="number">6</span>   Windows XP SP3 English (AlwaysOn NX)</span><br><span class="line">  <span class="number">7</span>   Windows XP SP3 English (NX)</span><br><span class="line">  <span class="number">8</span>   Windows XP SP2 Arabic (NX)</span><br><span class="line">  <span class="number">9</span>   Windows XP SP2 Chinese - Traditional / Taiwan (NX)</span><br><span class="line">  <span class="number">10</span>  Windows XP SP2 Chinese - Simplified (NX)</span><br><span class="line">  <span class="number">11</span>  Windows XP SP2 Chinese - Traditional (NX)</span><br><span class="line">  <span class="number">12</span>  Windows XP SP2 Czech (NX)</span><br><span class="line">  <span class="number">13</span>  Windows XP SP2 Danish (NX)</span><br><span class="line">  <span class="number">14</span>  Windows XP SP2 German (NX)</span><br><span class="line">  <span class="number">15</span>  Windows XP SP2 Greek (NX)</span><br><span class="line">  <span class="number">16</span>  Windows XP SP2 Spanish (NX)</span><br><span class="line">  <span class="number">17</span>  Windows XP SP2 Finnish (NX)</span><br><span class="line">  <span class="number">18</span>  Windows XP SP2 French (NX)</span><br><span class="line">  <span class="number">19</span>  Windows XP SP2 Hebrew (NX)</span><br><span class="line">  <span class="number">20</span>  Windows XP SP2 Hungarian (NX)</span><br><span class="line">  <span class="number">21</span>  Windows XP SP2 Italian (NX)</span><br><span class="line">  <span class="number">22</span>  Windows XP SP2 Japanese (NX)</span><br><span class="line">  <span class="number">23</span>  Windows XP SP2 Korean (NX)</span><br><span class="line">  <span class="number">24</span>  Windows XP SP2 Dutch (NX)</span><br><span class="line">  <span class="number">25</span>  Windows XP SP2 Norwegian (NX)</span><br><span class="line">  <span class="number">26</span>  Windows XP SP2 Polish (NX)</span><br><span class="line">  <span class="number">27</span>  Windows XP SP2 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">28</span>  Windows XP SP2 Portuguese (NX)</span><br><span class="line">  <span class="number">29</span>  Windows XP SP2 Russian (NX)</span><br><span class="line">  <span class="number">30</span>  Windows XP SP2 Swedish (NX)</span><br><span class="line">  <span class="number">31</span>  Windows XP SP2 Turkish (NX)</span><br><span class="line">  <span class="number">32</span>  Windows XP SP3 Arabic (NX)</span><br><span class="line">  <span class="number">33</span>  Windows XP SP3 Chinese - Traditional / Taiwan (NX)</span><br><span class="line">  <span class="number">34</span>  Windows XP SP3 Chinese - Simplified (NX)</span><br><span class="line">  <span class="number">35</span>  Windows XP SP3 Chinese - Traditional (NX)</span><br><span class="line">  <span class="number">36</span>  Windows XP SP3 Czech (NX)</span><br><span class="line">  <span class="number">37</span>  Windows XP SP3 Danish (NX)</span><br><span class="line">  <span class="number">38</span>  Windows XP SP3 German (NX)</span><br><span class="line">  <span class="number">39</span>  Windows XP SP3 Greek (NX)</span><br><span class="line">  <span class="number">40</span>  Windows XP SP3 Spanish (NX)</span><br><span class="line">  <span class="number">41</span>  Windows XP SP3 Finnish (NX)</span><br><span class="line">  <span class="number">42</span>  Windows XP SP3 French (NX)</span><br><span class="line">  <span class="number">43</span>  Windows XP SP3 Hebrew (NX)</span><br><span class="line">  <span class="number">44</span>  Windows XP SP3 Hungarian (NX)</span><br><span class="line">  <span class="number">45</span>  Windows XP SP3 Italian (NX)</span><br><span class="line">  <span class="number">46</span>  Windows XP SP3 Japanese (NX)</span><br><span class="line">  <span class="number">47</span>  Windows XP SP3 Korean (NX)</span><br><span class="line">  <span class="number">48</span>  Windows XP SP3 Dutch (NX)</span><br><span class="line">  <span class="number">49</span>  Windows XP SP3 Norwegian (NX)</span><br><span class="line">  <span class="number">50</span>  Windows XP SP3 Polish (NX)</span><br><span class="line">  <span class="number">51</span>  Windows XP SP3 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">52</span>  Windows XP SP3 Portuguese (NX)</span><br><span class="line">  <span class="number">53</span>  Windows XP SP3 Russian (NX)</span><br><span class="line">  <span class="number">54</span>  Windows XP SP3 Swedish (NX)</span><br><span class="line">  <span class="number">55</span>  Windows XP SP3 Turkish (NX)</span><br><span class="line">  <span class="number">56</span>  Windows <span class="number">2003</span> SP1 English (NO NX)</span><br><span class="line">  <span class="number">57</span>  Windows <span class="number">2003</span> SP1 English (NX)</span><br><span class="line">  <span class="number">58</span>  Windows <span class="number">2003</span> SP1 Japanese (NO NX)</span><br><span class="line">  <span class="number">59</span>  Windows <span class="number">2003</span> SP1 Spanish (NO NX)</span><br><span class="line">  <span class="number">60</span>  Windows <span class="number">2003</span> SP1 Spanish (NX)</span><br><span class="line">  <span class="number">61</span>  Windows <span class="number">2003</span> SP1 French (NO NX)</span><br><span class="line">  <span class="number">62</span>  Windows <span class="number">2003</span> SP1 French (NX)</span><br><span class="line">  <span class="number">63</span>  Windows <span class="number">2003</span> SP2 English (NO NX)</span><br><span class="line">  <span class="number">64</span>  Windows <span class="number">2003</span> SP2 English (NX)</span><br><span class="line">  <span class="number">65</span>  Windows <span class="number">2003</span> SP2 German (NO NX)</span><br><span class="line">  <span class="number">66</span>  Windows <span class="number">2003</span> SP2 German (NX)</span><br><span class="line">  <span class="number">67</span>  Windows <span class="number">2003</span> SP2 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">68</span>  Windows <span class="number">2003</span> SP2 Spanish (NO NX)</span><br><span class="line">  <span class="number">69</span>  Windows <span class="number">2003</span> SP2 Spanish (NX)</span><br><span class="line">  <span class="number">70</span>  Windows <span class="number">2003</span> SP2 Japanese (NO NX)</span><br><span class="line">  <span class="number">71</span>  Windows <span class="number">2003</span> SP2 French (NO NX)</span><br><span class="line">  <span class="number">72</span>  Windows <span class="number">2003</span> SP2 French (NX)</span><br><span class="line"></span><br><span class="line">Basic options:</span><br><span class="line">  Name     Current Setting  Required  Description</span><br><span class="line">  ----     ---------------  --------  -----------</span><br><span class="line">  RHOST                     yes       The target address</span><br><span class="line">  RPORT    <span class="number">445</span>              yes       Set the SMB service port</span><br><span class="line">  SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)</span><br><span class="line"></span><br><span class="line">Payload information:</span><br><span class="line">  Space: <span class="number">410</span></span><br><span class="line">  Avoid: <span class="number">8</span> characters</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">  This module exploits a parsing flaw <span class="keyword">in</span> the path canonicalization</span><br><span class="line">  code of NetAPI32.dll through the Server Service. This module is</span><br><span class="line">  capable of bypassing NX on some operating systems and service packs.</span><br><span class="line">  The correct target must be used to prevent the Server Service (along</span><br><span class="line">  with a dozen others <span class="keyword">in</span> the same process) from crashing. Windows XP</span><br><span class="line">  targets seem to handle multiple successful exploitation events, but</span><br><span class="line">  <span class="number">2003</span> targets will often crash or hang on subsequent attempts. This</span><br><span class="line">  is just the first version of this module, full support <span class="keyword">for</span> NX bypass</span><br><span class="line">  on <span class="number">2003</span>, along with other platforms, is still <span class="keyword">in</span> development.</span><br><span class="line"></span><br><span class="line">References:</span><br><span class="line">  http://cvedetails.com/cve/<span class="number">2008</span>-<span class="number">4250</span>/</span><br><span class="line">  http://www.osvdb.org/<span class="number">49243</span></span><br><span class="line">  http://technet.microsoft.com/en-us/security/bulletin/MS08-<span class="number">067</span></span><br><span class="line">  http://www.rapid7.com/vulndb/lookup/dcerpc-ms-netapi-netpathcanonicalize-dos</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Netcat" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/06/Netcat/" class="article-date">
-      <time datetime="2016-04-06T10:43:26.000Z" itemprop="datePublished">2016-04-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/06/Netcat/">Netcat</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h3><h2 id="The-Swiss-Army-Knife-of-TCP-IP-Connections"><a href="#The-Swiss-Army-Knife-of-TCP-IP-Connections" class="headerlink" title="The Swiss Army Knife of TCP/IP Connections"></a>The Swiss Army Knife of TCP/IP Connections</h2><p>   As the man page notes, the Netcat tool is known as the Swiss Army knife<br> for TCP/IP connections. It’s a versatile tool.</p>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -h</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/netcat.png" alt=""></p>
-<h3 id="Check-to-see-if-a-port-is-listening"><a href="#Check-to-see-if-a-port-is-listening" class="headerlink" title="Check to see if a port is listening"></a>Check to see if a port is listening</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -v [target ip address] [port]</span></span><br><span class="line"></span><br><span class="line">example:</span><br><span class="line">nc -v <span class="number">192.168</span>.<span class="number">130.133</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
-<p>You can also use the following command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~<span class="comment">#nc -lvp 1234</span></span><br><span class="line">listening on [any] <span class="number">1234</span>....</span><br></pre></td></tr></table></figure></p>
-<p>You use the options l for listen, v for verbose,and p to spcify the port to listen on</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Kali-Linux-source-file-and-install-vsftpd" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/" class="article-date">
-      <time datetime="2016-04-05T10:32:32.000Z" itemprop="datePublished">2016-04-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/">Kali Linux source file and install vsftpd</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Change-the-source-of-Kali-Linux"><a href="#Change-the-source-of-Kali-Linux" class="headerlink" title="Change the source of Kali Linux"></a>Change the source of Kali Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/apt/sources.list</span><br><span class="line">deb http://http.kali.org/kali sana main non-free contrib</span><br><span class="line">deb http://security.kali.org/kali-security/ sana/updates main contrib non-free</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line">apt-get dist-upgrade <span class="comment"># get a coffee, or 10.</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<h3 id="Install-vsftpd-in-Kali-Linux"><a href="#Install-vsftpd-in-Kali-Linux" class="headerlink" title="Install vsftpd in Kali Linux"></a>Install vsftpd in Kali Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vsftpd</span><br></pre></td></tr></table></figure>
-<p>If you want to allow local users to log in and to allow ftp uploads you have to edit file /etc/vsftpd.conf uncommenting the following</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">local</span>_<span class="built_in">enable</span>=YES</span><br><span class="line">write_<span class="built_in">enable</span>=YES</span><br><span class="line">chroot_list_<span class="built_in">enable</span>=YES</span><br><span class="line">chroot_list_file=/etc/vsftpd.chroot_list</span><br><span class="line">anonymous_<span class="built_in">enable</span>=NO</span><br></pre></td></tr></table></figure>
-<h3 id="start-the-service"><a href="#start-the-service" class="headerlink" title="start the service"></a>start the service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br><span class="line"></span><br><span class="line">check:</span><br><span class="line">netstat -nat | grep <span class="number">21</span></span><br></pre></td></tr></table></figure>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="https://www.kali.org/releases/kali-linux-20-released/" target="_blank" rel="external">Source</a><br><a href="http://www.gosecure.it/blog/art/93/note/install-ftp-server-on-kali-linux/" target="_blank" rel="external">Install-vsftpd</a></p>
 
       
     </div>
