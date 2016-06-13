@@ -249,6 +249,9 @@
           
         <h3 id="设置本地网卡DHCP模式"><a href="#设置本地网卡DHCP模式" class="headerlink" title="设置本地网卡DHCP模式"></a>设置本地网卡DHCP模式</h3><p>netsh interface ip set address name=”本地连接” source=dhcp</p>
 <p>本地连接为想要设置的网卡</p>
+<h3 id="利用cmd更换桌面壁纸"><a href="#利用cmd更换桌面壁纸" class="headerlink" title="利用cmd更换桌面壁纸"></a>利用cmd更换桌面壁纸</h3><p>1.reg add “HKEY_CURRENT_USER\Control Panel\Desktop” /v Wallpaper /t REG_SZ /d E:\photos\image1.bmp /f</p>
+<p>2.cd C:\Windows\system32</p>
+<p>3.RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters</p>
 
       
     </div>
