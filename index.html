@@ -248,9 +248,8 @@
       
           
         <h3 id="找到了一个网址可以被XSS"><a href="#找到了一个网址可以被XSS" class="headerlink" title="找到了一个网址可以被XSS"></a>找到了一个网址可以被XSS</h3><p>利用Google hack 的搜索功能:<br>inurl:/search_results.php?search=</p>
-<h3 id="测试是否能被XSS"><a href="#测试是否能被XSS" class="headerlink" title="测试是否能被XSS"></a>测试是否能被XSS</h3><p>我一般使用这条常见的</p>
-<script>alert("ERROR");</script>
-
+<h3 id="测试是否能被XSS"><a href="#测试是否能被XSS" class="headerlink" title="测试是否能被XSS"></a>测试是否能被XSS</h3><p>我一般使用这条常见的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="string">"ERROR"</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>我日刚才都把这条XSS 存到我博客里面了，汗….</p>
 <p>我这边测试了一下<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/XSS01.png" alt="XSS测试"></p>
 <p>然后又恶搞了一下，看还能不能传入其他的<br>试了一下这条</p>
 <p><script>alert(“1”)</script><img src="外链"></p>
