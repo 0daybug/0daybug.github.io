@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 13.33px;">Understanding Network Hacks</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
+                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 13.33px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,73 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Bypass-a-Path-Based-Access-Control-Scheme" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/" class="article-date">
+      <time datetime="2016-06-21T15:32:52.000Z" itemprop="datePublished">2016-06-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/">Bypass a Path Based Access Control Scheme</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="WebGoat里的一道题目"><a href="#WebGoat里的一道题目" class="headerlink" title="WebGoat里的一道题目"></a>WebGoat里的一道题目</h3><p>描述：</p>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/1.png" alt=""></p>
+<p>分析目录<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/2.png" alt=""></p>
+<p>准备工具Tamper<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/3.png" alt=""></p>
+<p>启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File<br>请求后，Tamper会类似劫持<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/4.png" alt=""></p>
+<p>我们可以看到View File会向服务端请求这个页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/5.png" alt=""></p>
+<p>我们修改这个路径<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/7.png" alt=""></p>
+<p>确定后,Tamper会把修改后的请求发送给服务器端，服务器端<br>将会返回我们规定的请求页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/8.png" alt=""></p>
+<p>造成这个原因有可能是中间件配置不当，导致该目录文件权限配置不当</p>
+<p><a href="http://drops.wooyun.org/web/13594" target="_blank" rel="external">WooYun Reference</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-TCP" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -820,69 +887,6 @@ if packet[ARP].op == 1:
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Attack/">Attack</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-information-gathering" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/26/information-gathering/" class="article-date">
-      <time datetime="2016-04-26T14:02:19.000Z" itemprop="datePublished">2016-04-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/26/information-gathering/">information gathering</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Information-Gathering"><a href="#Information-Gathering" class="headerlink" title="Information Gathering"></a>Information Gathering</h3><h2 id="whois"><a href="#whois" class="headerlink" title="whois"></a>whois</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.Install this tool on Kali Linux</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/whois_install.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>.How to use it?</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/useit.png" alt=""></p>
-<h2 id="nslookup"><a href="#nslookup" class="headerlink" title="nslookup"></a>nslookup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.How to use nslookup?</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/nslookup.png" alt=""></p>
-<h2 id="host"><a href="#host" class="headerlink" title="host"></a>host</h2><p>host -t ns zoneedit.com</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
     </div>
 
       

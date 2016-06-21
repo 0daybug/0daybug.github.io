@@ -3,18 +3,49 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Understanding Network Hacks--Scapy | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>Bypass a Path Based Access Control Scheme | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0x01 ScapyThe default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!I tried once to set up the environment on OS X but eventually i just failed. It seems tobe the libdne">
+  <meta name="description" content="WebGoat里的一道题目描述：
+
+分析目录
+准备工具Tamper
+启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File请求后，Tamper会类似劫持
+我们可以看到View File会向服务端请求这个页面
+我们修改这个路径
+确定后,Tamper会把修改后的请求发送给服务器端，服务器端将会返回我们规定的请求页面
+造成这个原因有可能是中间件配置不当，导致该目录文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Understanding Network Hacks--Scapy">
-<meta property="og:url" content="http://0daybug.github.io/2016/06/12/Understanding-Network-Hacks-Scapy/index.html">
+<meta property="og:title" content="Bypass a Path Based Access Control Scheme">
+<meta property="og:url" content="http://0daybug.github.io/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="0x01 ScapyThe default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!I tried once to set up the environment on OS X but eventually i just failed. It seems tobe the libdne">
-<meta property="og:updated_time" content="2016-06-12T03:21:15.000Z">
+<meta property="og:description" content="WebGoat里的一道题目描述：
+
+分析目录
+准备工具Tamper
+启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File请求后，Tamper会类似劫持
+我们可以看到View File会向服务端请求这个页面
+我们修改这个路径
+确定后,Tamper会把修改后的请求发送给服务器端，服务器端将会返回我们规定的请求页面
+造成这个原因有可能是中间件配置不当，导致该目录文">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/1.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/2.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/3.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/4.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/5.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/7.png">
+<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/8.png">
+<meta property="og:updated_time" content="2016-06-21T15:57:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Understanding Network Hacks--Scapy">
-<meta name="twitter:description" content="0x01 ScapyThe default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!I tried once to set up the environment on OS X but eventually i just failed. It seems tobe the libdne">
+<meta name="twitter:title" content="Bypass a Path Based Access Control Scheme">
+<meta name="twitter:description" content="WebGoat里的一道题目描述：
+
+分析目录
+准备工具Tamper
+启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File请求后，Tamper会类似劫持
+我们可以看到View File会向服务端请求这个页面
+我们修改这个路径
+确定后,Tamper会把修改后的请求发送给服务器端，服务器端将会返回我们规定的请求页面
+造成这个原因有可能是中间件配置不当，导致该目录文">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -216,11 +247,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Understanding-Network-Hacks-Scapy" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Bypass-a-Path-Based-Access-Control-Scheme" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/" class="article-date">
-      <time datetime="2016-06-12T03:04:10.000Z" itemprop="datePublished">2016-06-12</time>
+      <a href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/" class="article-date">
+      <time datetime="2016-06-21T15:32:52.000Z" itemprop="datePublished">2016-06-21</time>
 </a>
     </div>
   
@@ -233,7 +264,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Understanding Network Hacks--Scapy
+      Bypass a Path Based Access Control Scheme
     </h1>
   
 
@@ -244,7 +275,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -254,17 +285,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="0x01-Scapy"><a href="#0x01-Scapy" class="headerlink" title="0x01 Scapy"></a>0x01 Scapy</h3><p>The default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!<br>I tried once to set up the environment on OS X but eventually i just failed. It seems to<br>be the libdnet problem. I tried a lot of ways to fixed this probem. God damn it, i just<br>can’t fix it. if you can solve this problem pls let me know!</p>
-<p>alright. let’s get started with scapy</p>
-<h2 id="first-create-a-packet-using-scapy"><a href="#first-create-a-packet-using-scapy" class="headerlink" title="first. create a packet using scapy"></a>first. create a packet using scapy</h2><blockquote>
-<blockquote>
-<blockquote>
-<p>a=IP(ttl=10)<br>a<br>&lt; IP ttl=10 |&gt;<br>a.src<br>’127.0.0.1’<br>a.dst=”192.168.1.1”<br>a<br>&lt; IP ttl=10 dst=192.168.1.1 |&gt;<br>a.src<br>’192.168.8.14’<br>del(a.ttl)<br>a<br>&lt; IP dst=192.168.1.1 |&gt;<br>a.ttl<br>64</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>as we can see the default ttl is 64.</p>
-<h2 id="stack-up-layers-according-to-the-OSI-model"><a href="#stack-up-layers-according-to-the-OSI-model" class="headerlink" title="stack up layers according to the OSI model"></a>stack up layers according to the OSI model</h2>
+        <h3 id="WebGoat里的一道题目"><a href="#WebGoat里的一道题目" class="headerlink" title="WebGoat里的一道题目"></a>WebGoat里的一道题目</h3><p>描述：</p>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/1.png" alt=""></p>
+<p>分析目录<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/2.png" alt=""></p>
+<p>准备工具Tamper<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/3.png" alt=""></p>
+<p>启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File<br>请求后，Tamper会类似劫持<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/4.png" alt=""></p>
+<p>我们可以看到View File会向服务端请求这个页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/5.png" alt=""></p>
+<p>我们修改这个路径<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/7.png" alt=""></p>
+<p>确定后,Tamper会把修改后的请求发送给服务器端，服务器端<br>将会返回我们规定的请求页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/8.png" alt=""></p>
+<p>造成这个原因有可能是中间件配置不当，导致该目录文件权限配置不当</p>
+<p><a href="http://drops.wooyun.org/web/13594" target="_blank" rel="external">WooYun Reference</a></p>
+
       
     </div>
     
@@ -272,13 +303,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/12/Understanding-Network-Hacks-Scapy/">Understanding Network Hacks--Scapy</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/">Bypass a Path Based Access Control Scheme</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年06月12日 - 11时04分</p>
-        <p><span>最后更新:</span>2016年06月12日 - 11时21分</p>
+        <p><span>发布时间:</span>2016年06月21日 - 23时32分</p>
+        <p><span>最后更新:</span>2016年06月21日 - 23时57分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/12/Understanding-Network-Hacks-Scapy/" title="Understanding Network Hacks--Scapy">http://0daybug.github.io/2016/06/12/Understanding-Network-Hacks-Scapy/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/12/Understanding-Network-Hacks-Scapy/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/" title="Bypass a Path Based Access Control Scheme">http://0daybug.github.io/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -291,16 +322,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/">
-                    using cmd on WIndows to set interface on DHCP mode
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/09/ARP-cache-Poisoning/">
-                    ARP cache Poisoning
+                <a href="/2016/06/21/TCP/">
+                    TCP
                 </a>
             </div>
         
@@ -311,7 +336,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Scapy"><span class="toc-number">1.</span> <span class="toc-text">0x01 Scapy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#first-create-a-packet-using-scapy"><span class="toc-number"></span> <span class="toc-text">first. create a packet using scapy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stack-up-layers-according-to-the-OSI-model"><span class="toc-number"></span> <span class="toc-text">stack up layers according to the OSI model</span></a>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#WebGoat里的一道题目"><span class="toc-number">1.</span> <span class="toc-text">WebGoat里的一道题目</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -375,7 +400,7 @@
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Understanding-Network-Hacks-Scapy" data-title="Understanding Network Hacks--Scapy" data-url="http://0daybug.github.io/2016/06/12/Understanding-Network-Hacks-Scapy/"></div>
+    <div class="ds-thread" data-thread-key="Bypass-a-Path-Based-Access-Control-Scheme" data-title="Bypass a Path Based Access Control Scheme" data-url="http://0daybug.github.io/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -399,15 +424,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/" title="上一篇: using cmd on WIndows to set interface on DHCP mode">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/09/ARP-cache-Poisoning/" title="下一篇: ARP cache Poisoning">
+            <a href="/2016/06/21/TCP/" title="下一篇: TCP">
                 <i class="fa fa-angle-right"></i>
             </a>
         
