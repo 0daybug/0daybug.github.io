@@ -3,36 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Google hack | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>TCP | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="找到了一个网址可以被XSS利用Google hack 的搜索功能:inurl:/search_results.php?search=
-测试是否能被XSS我一般使用这条常见的1&amp;lt;script&amp;gt;alert(&quot;ERROR&quot;);&amp;lt;/script&amp;gt;
-我日刚才都把这条XSS 存到我博客里面了，汗….
-我这边测试了一下
-然后又恶搞了一下，看还能不能传入其他的试了一下这条
-alert(“1">
+  <meta name="description" content="Introduction blablabla…TCP provides session management.
+A new TCP session is initialized by the famous Three-Way-Handshake
+TCP-flags
+SYN– Ask for a new connectionACK– Acknowledge the receipt of a pack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Google hack">
-<meta property="og:url" content="http://0daybug.github.io/2016/06/17/Google-hack/index.html">
+<meta property="og:title" content="TCP">
+<meta property="og:url" content="http://0daybug.github.io/2016/06/21/TCP/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="找到了一个网址可以被XSS利用Google hack 的搜索功能:inurl:/search_results.php?search=
-测试是否能被XSS我一般使用这条常见的1&amp;lt;script&amp;gt;alert(&quot;ERROR&quot;);&amp;lt;/script&amp;gt;
-我日刚才都把这条XSS 存到我博客里面了，汗….
-我这边测试了一下
-然后又恶搞了一下，看还能不能传入其他的试了一下这条
-alert(“1">
-<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/XSS01.png">
-<meta property="og:image" content="http://0daybug.github.io/外链">
-<meta property="og:image" content="http://7xs1w6.com1.z0.glb.clouddn.com/XSS02.png">
-<meta property="og:updated_time" content="2016-06-17T15:34:15.000Z">
+<meta property="og:description" content="Introduction blablabla…TCP provides session management.
+A new TCP session is initialized by the famous Three-Way-Handshake
+TCP-flags
+SYN– Ask for a new connectionACK– Acknowledge the receipt of a pack">
+<meta property="og:updated_time" content="2016-06-21T09:39:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Google hack">
-<meta name="twitter:description" content="找到了一个网址可以被XSS利用Google hack 的搜索功能:inurl:/search_results.php?search=
-测试是否能被XSS我一般使用这条常见的1&amp;lt;script&amp;gt;alert(&quot;ERROR&quot;);&amp;lt;/script&amp;gt;
-我日刚才都把这条XSS 存到我博客里面了，汗….
-我这边测试了一下
-然后又恶搞了一下，看还能不能传入其他的试了一下这条
-alert(“1">
+<meta name="twitter:title" content="TCP">
+<meta name="twitter:description" content="Introduction blablabla…TCP provides session management.
+A new TCP session is initialized by the famous Three-Way-Handshake
+TCP-flags
+SYN– Ask for a new connectionACK– Acknowledge the receipt of a pack">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -234,11 +225,11 @@ alert(“1">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Google-hack" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-TCP" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/17/Google-hack/" class="article-date">
-      <time datetime="2016-06-17T15:19:54.000Z" itemprop="datePublished">2016-06-17</time>
+      <a href="/2016/06/21/TCP/" class="article-date">
+      <time datetime="2016-06-21T08:55:33.000Z" itemprop="datePublished">2016-06-21</time>
 </a>
     </div>
   
@@ -251,7 +242,7 @@ alert(“1">
         
   
     <h1 class="article-title" itemprop="name">
-      Google hack
+      TCP
     </h1>
   
 
@@ -262,7 +253,7 @@ alert(“1">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Hack/">Google Hack</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -272,14 +263,15 @@ alert(“1">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="找到了一个网址可以被XSS"><a href="#找到了一个网址可以被XSS" class="headerlink" title="找到了一个网址可以被XSS"></a>找到了一个网址可以被XSS</h3><p>利用Google hack 的搜索功能:<br>inurl:/search_results.php?search=</p>
-<h3 id="测试是否能被XSS"><a href="#测试是否能被XSS" class="headerlink" title="测试是否能被XSS"></a>测试是否能被XSS</h3><p>我一般使用这条常见的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="string">"ERROR"</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>我日刚才都把这条XSS 存到我博客里面了，汗….</p>
-<p>我这边测试了一下<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/XSS01.png" alt="XSS测试"></p>
-<p>然后又恶搞了一下，看还能不能传入其他的<br>试了一下这条</p>
-<p><script>alert(“1”)</script><img src="外链"></p>
-<p>里面的外链 是我存的图片外链地址.<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/XSS02.png" alt="传入图片"></p>
-<h3 id="感觉还能做其他事情"><a href="#感觉还能做其他事情" class="headerlink" title="感觉还能做其他事情"></a>感觉还能做其他事情</h3><p>等做完再更新吧</p>
+        <h3 id="Introduction-blablabla…"><a href="#Introduction-blablabla…" class="headerlink" title="Introduction blablabla…"></a>Introduction blablabla…</h3><p>TCP provides session management.</p>
+<p>A new TCP session is initialized by the famous Three-Way-Handshake</p>
+<p>TCP-flags</p>
+<p>SYN– Ask for a new connection<br>ACK– Acknowledge the receipt of a packet<br>RST– Cancel a connection attempt (is usually send when a host tries to<br>      connect to a closed port)<br>FIN– Cleanly close an established connection (must be acknowledged by<br>      counterpart)<br>URG– Mark a packet as urgent<br>PSH– Bid the receiver to handle packet with higher priority</p>
+<h3 id="An-Example-Network"><a href="#An-Example-Network" class="headerlink" title="An Example Network"></a>An Example Network</h3><p>An Ethernet/TCP/IP network is what you nowadays think of if you hear the term<br>network,because it is by far the most common one. Its constructed of five layers<br>instead of the theoretical seven layers of the ISO/OSI model. For short refreshing:<br>Ethernet is on layer 2, IP(Internet Protocol) on layer 3, TCP(Transport Control<br>  Protocol) or UDP on layer 4-6 and services like HTTP,SMTP,FTP on layer 7.</p>
+<h3 id="How-a-HTTP-packet-passes-all-those-layers-one-after-another"><a href="#How-a-HTTP-packet-passes-all-those-layers-one-after-another" class="headerlink" title="How a HTTP packet passes all those layers one after another."></a>How a HTTP packet passes all those layers one after another.</h3><p>We want to get the index page of www.google.com .<br>(1) Our computer parses the URL www.google.com into the following components:<br>    HTTP as application protocol to be used.<br>    the hostname www<br>    the domain google<br>    the Top-Level-Domain com<br>    /</p>
+<p>(2) Armed with these information our computer constructs the following HTTP-Header(Layer 7):<br>    GET / HTTP 1.1<br>    Host: www.google.com</p>
+<p>(3) Next we head on to TCP (layer 4-6). It establishes a connection by the use of the<br>    Three-Way-Handshake addressing the destination port 80(HTTP) and a random source<br>    port to connect the browser with the network.</p>
+<p>(4) IP (layer 3) recognize that it cannot use www.google.com for addressing since it can only<br>    use IP addresses such as 12.34.56.78 so it makes a DNS query to resolve the IP for the<br>    hostname.<br>    Now IP checks if the destination host is in the same network as our computer.<br>    This is not the case therefore a lookup into the routing table is necessary to retrieve<br>    the address of the next hop.</p>
 
       
     </div>
@@ -288,13 +280,13 @@ alert(“1">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/17/Google-hack/">Google hack</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/21/TCP/">TCP</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年06月17日 - 23时19分</p>
-        <p><span>最后更新:</span>2016年06月17日 - 23时34分</p>
+        <p><span>发布时间:</span>2016年06月21日 - 16时55分</p>
+        <p><span>最后更新:</span>2016年06月21日 - 17时39分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/17/Google-hack/" title="Google hack">http://0daybug.github.io/2016/06/17/Google-hack/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/17/Google-hack/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/21/TCP/" title="TCP">http://0daybug.github.io/2016/06/21/TCP/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/21/TCP/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -307,16 +299,10 @@ alert(“1">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/06/21/Metasploitable靶机测试/">
-                    Metasploitable靶机测试
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/">
-                    using cmd on WIndows to set interface on DHCP mode
+                <a href="/2016/06/21/Metasploitable靶机测试/">
+                    Metasploitable靶机测试
                 </a>
             </div>
         
@@ -327,7 +313,7 @@ alert(“1">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#找到了一个网址可以被XSS"><span class="toc-number">1.</span> <span class="toc-text">找到了一个网址可以被XSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试是否能被XSS"><span class="toc-number">2.</span> <span class="toc-text">测试是否能被XSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#感觉还能做其他事情"><span class="toc-number">3.</span> <span class="toc-text">感觉还能做其他事情</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction-blablabla…"><span class="toc-number">1.</span> <span class="toc-text">Introduction blablabla…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#An-Example-Network"><span class="toc-number">2.</span> <span class="toc-text">An Example Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-a-HTTP-packet-passes-all-those-layers-one-after-another"><span class="toc-number">3.</span> <span class="toc-text">How a HTTP packet passes all those layers one after another.</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -391,7 +377,7 @@ alert(“1">
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="Google-hack" data-title="Google hack" data-url="http://0daybug.github.io/2016/06/17/Google-hack/"></div>
+    <div class="ds-thread" data-thread-key="TCP" data-title="TCP" data-url="http://0daybug.github.io/2016/06/21/TCP/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -415,15 +401,13 @@ alert(“1">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/21/Metasploitable靶机测试/" title="上一篇: Metasploitable靶机测试">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/13/using-cmd-on-WIndows-to-set-interface-on-DHCP-mode/" title="下一篇: using cmd on WIndows to set interface on DHCP mode">
+            <a href="/2016/06/21/Metasploitable靶机测试/" title="下一篇: Metasploitable靶机测试">
                 <i class="fa fa-angle-right"></i>
             </a>
         
