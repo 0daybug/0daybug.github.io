@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
+                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,69 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Kali-Linux-source-file-and-install-vsftpd" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/" class="article-date">
+      <time datetime="2016-04-05T10:32:32.000Z" itemprop="datePublished">2016-04-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/05/Kali-Linux-source-file-and-install-vsftpd/">Kali Linux source file and install vsftpd</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="Change-the-source-of-Kali-Linux"><a href="#Change-the-source-of-Kali-Linux" class="headerlink" title="Change the source of Kali Linux"></a>Change the source of Kali Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/apt/sources.list</span><br><span class="line">deb http://http.kali.org/kali sana main non-free contrib</span><br><span class="line">deb http://security.kali.org/kali-security/ sana/updates main contrib non-free</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line">apt-get dist-upgrade <span class="comment"># get a coffee, or 10.</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="Install-vsftpd-in-Kali-Linux"><a href="#Install-vsftpd-in-Kali-Linux" class="headerlink" title="Install vsftpd in Kali Linux"></a>Install vsftpd in Kali Linux</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vsftpd</span><br></pre></td></tr></table></figure>
+<p>If you want to allow local users to log in and to allow ftp uploads you have to edit file /etc/vsftpd.conf uncommenting the following</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">local</span>_<span class="built_in">enable</span>=YES</span><br><span class="line">write_<span class="built_in">enable</span>=YES</span><br><span class="line">chroot_list_<span class="built_in">enable</span>=YES</span><br><span class="line">chroot_list_file=/etc/vsftpd.chroot_list</span><br><span class="line">anonymous_<span class="built_in">enable</span>=NO</span><br></pre></td></tr></table></figure>
+<h3 id="start-the-service"><a href="#start-the-service" class="headerlink" title="start the service"></a>start the service</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br><span class="line"></span><br><span class="line">check:</span><br><span class="line">netstat -nat | grep <span class="number">21</span></span><br></pre></td></tr></table></figure>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="https://www.kali.org/releases/kali-linux-20-released/" target="_blank" rel="external">Source</a><br><a href="http://www.gosecure.it/blog/art/93/note/install-ftp-server-on-kali-linux/" target="_blank" rel="external">Install-vsftpd</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-C语言短路现象" class="article article-type-post" itemscope itemprop="blogPost">
   
