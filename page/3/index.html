@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 17.5px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
+                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 16.67px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 20px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,85 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-C语言短路现象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/28/C语言短路现象/" class="article-date">
+      <time datetime="2016-03-28T12:56:19.000Z" itemprop="datePublished">2016-03-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/28/C语言短路现象/">C语言短路现象</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="C语言短路现象"><a href="#C语言短路现象" class="headerlink" title="C语言短路现象"></a>C语言短路现象</h3><pre>
+<code>
+#import <foundation foundation.h="">
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        // insert code here...
+        int a = 10, b = 20, c = 30;
+        BOOL d = a > b && b++;
+        BOOL e = a < b && c++;
+        printf("%d\n", b);
+        printf("%d\n", c);
+
+    }
+    return 0;
+}
+</foundation></code>
+</pre>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上面的结果:</span><br><span class="line">b为<span class="number">20</span></span><br><span class="line">c为<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">当在语句BOOL d = a &gt; b &amp;&amp; b ++;</span><br><span class="line">因为a = <span class="number">10</span>, b = <span class="number">20</span> 所以自然不成立，而后面是&amp;&amp; 操作符 故</span><br><span class="line">不会执行后面的b++</span><br><span class="line"></span><br><span class="line">当在语句BOOL e = a &lt; b &amp;&amp; c++;</span><br><span class="line">因为a = <span class="number">10</span>, b = <span class="number">20</span> 成立，这个时候&amp;&amp;后面的内容就必须得进行操作</span><br><span class="line">所以c++ 完成自增，so c = <span class="number">31</span></span><br><span class="line"></span><br><span class="line">同理其中&amp;&amp;替换成其他运算符按照相同原理判断</span><br></pre></td></tr></table></figure>
+<h3 id="附一张出差唐山的图片，嘻嘻"><a href="#附一张出差唐山的图片，嘻嘻" class="headerlink" title="附一张出差唐山的图片，嘻嘻"></a>附一张出差唐山的图片，嘻嘻</h3><p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/%E5%94%90%E5%B1%B1.jpeg" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS学习/">iOS学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Linux禁Ping实现方案" class="article article-type-post" itemscope itemprop="blogPost">
   
