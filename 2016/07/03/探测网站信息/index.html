@@ -15,7 +15,7 @@ we can get the following information:
 <meta property="og:description" content="Identifying the technology used by a websitewe need to install builtwith first12import builtwithbuiltwith.parse(&apos;http://example.webscrapying.com&apos;)
 we can get the following information:
 {u’javascript-f">
-<meta property="og:updated_time" content="2016-07-02T16:33:26.000Z">
+<meta property="og:updated_time" content="2016-07-02T16:44:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="探测网站信息">
 <meta name="twitter:description" content="Identifying the technology used by a websitewe need to install builtwith first12import builtwithbuiltwith.parse(&apos;http://example.webscrapying.com&apos;)
@@ -264,6 +264,17 @@ we can get the following information:
 <p>we can get the following information:</p>
 <p>{u’javascript-frameworks’: [u’jQuery’, u’Modernizr’, u’jQuery UI’],<br>u’web-frameworks’: [u’Web2py’, u’Twitter Bootstrap’],<br>u’programming-languages’: [u’Python’], u’web-servers’: [u’Nginx’]}</p>
 <p>This module will take a URL,download and analyze it, and then return<br>the technologies used by the website.</p>
+<h3 id="Finding-the-owner-of-a-website"><a href="#Finding-the-owner-of-a-website" class="headerlink" title="Finding the owner of a website"></a>Finding the owner of a website</h3><p>You need to install the module named python-whois</p>
+<p>pip install python-whois</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> whois</span><br><span class="line"><span class="keyword">print</span> whois.whois(<span class="string">'weibo.com'</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>print whois.whois(‘weibo.com’)</p>
+<p>print whois.whois(‘weibo.com’)<br>{<br>  “updated_date”: [<br>    “2016-03-20 00:00:00”,<br>    “2016-03-20 14:56:29”<br>  ],<br>  “status”: [<br>    “clientDeleteProhibited <a href="https://icann.org/epp#clientDeleteProhibited" target="_blank" rel="external">https://icann.org/epp#clientDeleteProhibited</a>“,<br>    “clientTransferProhibited <a href="https://icann.org/epp#clientTransferProhibited" target="_blank" rel="external">https://icann.org/epp#clientTransferProhibited</a>“,<br>    “clientUpdateProhibited <a href="https://icann.org/epp#clientUpdateProhibited" target="_blank" rel="external">https://icann.org/epp#clientUpdateProhibited</a>“<br>  ],<br>  “name”: “Beijing Weibo Internet Technology Co.,Ltd”,<br>  “dnssec”: “unsigned”,<br>  “city”: “Bei jing”,<br>  “expiration_date”: [<br>    “2026-03-20 00:00:00”,<br>    “2111-03-20 04:00:00”<br>  ],<br>  “zipcode”: “100080”,<br>  “domain_name”: [<br>    “WEIBO.COM”,<br>    “weibo.com”<br>  ],<br>  “country”: “CN”,<br>  “whois_server”: “whois.35.com”,<br>  “state”: “Bei jing”,<br>  “registrar”: “35 Technology Co., Ltd.”,<br>  “referral_url”: “<a href="http://www.35.com" target="_blank" rel="external">http://www.35.com</a>“,<br>  “address”: “Ideal Int’l Plaza, No. 58, West Of North Forth Ring Rd”,<br>  “name_servers”: [<br>    “NS1.SINA.COM.CN”,<br>    “NS2.SINA.COM.CN”,<br>    “NS3.SINA.COM”,<br>    “NS3.SINA.COM.CN”,<br>    “NS4.SINA.COM”,<br>    “NS4.SINA.COM.CN”,<br>    “ns1.sina.com.cn”,<br>    “ns2.sina.com.cn”,<br>    “ns3.sina.com.cn”,<br>    “ns4.sina.com.cn”,<br>    “ns3.sina.com”,<br>    “ns4.sina.com”<br>  ],<br>  “org”: “Beijing Weibo Internet Technology Co., Ltd.”,<br>  “creation_date”: [<br>    “1999-03-20 00:00:00”,<br>    “1999-03-20 04:00:00”<br>  ],<br>  “emails”: [<br>    “abuse@35.cn”,<br>    “domainname@staff.sina.com.cn”<br>  ]<br>}</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
       
     </div>
@@ -275,7 +286,7 @@ we can get the following information:
         <p><span>本文标题:</span><a href="/2016/07/03/探测网站信息/">探测网站信息</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
         <p><span>发布时间:</span>2016年07月03日 - 00时27分</p>
-        <p><span>最后更新:</span>2016年07月03日 - 00时33分</p>
+        <p><span>最后更新:</span>2016年07月03日 - 00时44分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/03/探测网站信息/" title="探测网站信息">http://0daybug.github.io/2016/07/03/探测网站信息/</a>
             <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/07/03/探测网站信息/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -305,7 +316,7 @@ we can get the following information:
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-the-technology-used-by-a-website"><span class="toc-number">1.</span> <span class="toc-text">Identifying the technology used by a website</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-the-technology-used-by-a-website"><span class="toc-number">1.</span> <span class="toc-text">Identifying the technology used by a website</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finding-the-owner-of-a-website"><span class="toc-number">2.</span> <span class="toc-text">Finding the owner of a website</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
