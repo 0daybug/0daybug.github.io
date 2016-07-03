@@ -220,6 +220,71 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Google-hack" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/17/Google-hack/" class="article-date">
+      <time datetime="2016-06-17T15:19:54.000Z" itemprop="datePublished">2016-06-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/17/Google-hack/">Google hack</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="找到了一个网址可以被XSS"><a href="#找到了一个网址可以被XSS" class="headerlink" title="找到了一个网址可以被XSS"></a>找到了一个网址可以被XSS</h3><p>利用Google hack 的搜索功能:<br>inurl:/search_results.php?search=</p>
+<h3 id="测试是否能被XSS"><a href="#测试是否能被XSS" class="headerlink" title="测试是否能被XSS"></a>测试是否能被XSS</h3><p>我一般使用这条常见的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="string">"ERROR"</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>我日刚才都把这条XSS 存到我博客里面了，汗….</p>
+<p>我这边测试了一下<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/XSS01.png" alt="XSS测试"></p>
+<p>然后又恶搞了一下，看还能不能传入其他的<br>试了一下这条</p>
+<p><script>alert(“1”)</script><img src="外链"></p>
+<p>里面的外链 是我存的图片外链地址.<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/XSS02.png" alt="传入图片"></p>
+<h3 id="感觉还能做其他事情"><a href="#感觉还能做其他事情" class="headerlink" title="感觉还能做其他事情"></a>感觉还能做其他事情</h3><p>等做完再更新吧</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Hack/">Google Hack</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-using-cmd-on-WIndows-to-set-interface-on-DHCP-mode" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -823,68 +888,6 @@ if packet[ARP].op == 1:
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-MS08-067" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/12/MS08-067/" class="article-date">
-      <time datetime="2016-04-11T16:04:42.000Z" itemprop="datePublished">2016-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/12/MS08-067/">MS08-067</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MS08-<span class="number">067</span> pathed an issue <span class="keyword">in</span> the netapi32.dll that could allow</span><br><span class="line">attackers to use a specially crafted remote procedure call request</span><br><span class="line">via the Server Message Block(SMB) service to take over a target system.</span><br><span class="line">This vulnerability is particularly dangerous because it does not require</span><br><span class="line">an attacker to authenticate to the target machine before running the</span><br><span class="line">attack. MS08-<span class="number">067</span> gained eternal infamy as the vulnerability exploited</span><br><span class="line">by the Conficker worm, <span class="built_in">which</span> was widely reported <span class="keyword">in</span> the media.</span><br></pre></td></tr></table></figure>
-<h2 id="Risk-on-different-platform"><a href="#Risk-on-different-platform" class="headerlink" title="Risk on different platform"></a>Risk on different platform</h2><p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/MS08_067.jpg" alt=""></p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://blogs.technet.microsoft.com/srd/2008/10/23/more-detail-about-ms08-067-the-out-of-band-netapi32-dll-security-update/" target="_blank" rel="external">Netapi32.dll and MS08-067</a></p>
-<p><a href="http://www.rapid7.com/db/modules/" target="_blank" rel="external">Rapid7</a></p>
-<h2 id="Results-from-Metasploit"><a href="#Results-from-Metasploit" class="headerlink" title="Results from Metasploit"></a>Results from Metasploit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; info exploit/windows/smb/ms08_067_netapi</span><br><span class="line"></span><br><span class="line">  Name: MS08-<span class="number">067</span> Microsoft Server Service Relative Path Stack Corruption</span><br><span class="line">   Module: exploit/windows/smb/ms08_067_netapi</span><br><span class="line">   Platform: Windows</span><br><span class="line">   Privileged: Yes</span><br><span class="line">   License: Metasploit Framework License (BSD)</span><br><span class="line">   Rank: Great</span><br><span class="line">  Disclosed: <span class="number">2008</span>-<span class="number">10</span>-<span class="number">28</span></span><br><span class="line"></span><br><span class="line">Provided by:</span><br><span class="line">  hdm &lt;x@hdm.io&gt;</span><br><span class="line">  Brett Moore &lt;brett.moore@insomniasec.com&gt;</span><br><span class="line">  frank2 &lt;frank2@dc949.org&gt;</span><br><span class="line">  jduck &lt;jduck@metasploit.com&gt;</span><br><span class="line"></span><br><span class="line">Available targets:</span><br><span class="line">  Id  Name</span><br><span class="line">  --  ----</span><br><span class="line">  <span class="number">0</span>   Automatic Targeting</span><br><span class="line">  <span class="number">1</span>   Windows <span class="number">2000</span> Universal</span><br><span class="line">  <span class="number">2</span>   Windows XP SP0/SP1 Universal</span><br><span class="line">  <span class="number">3</span>   Windows <span class="number">2003</span> SP0 Universal</span><br><span class="line">  <span class="number">4</span>   Windows XP SP2 English (AlwaysOn NX)</span><br><span class="line">  <span class="number">5</span>   Windows XP SP2 English (NX)</span><br><span class="line">  <span class="number">6</span>   Windows XP SP3 English (AlwaysOn NX)</span><br><span class="line">  <span class="number">7</span>   Windows XP SP3 English (NX)</span><br><span class="line">  <span class="number">8</span>   Windows XP SP2 Arabic (NX)</span><br><span class="line">  <span class="number">9</span>   Windows XP SP2 Chinese - Traditional / Taiwan (NX)</span><br><span class="line">  <span class="number">10</span>  Windows XP SP2 Chinese - Simplified (NX)</span><br><span class="line">  <span class="number">11</span>  Windows XP SP2 Chinese - Traditional (NX)</span><br><span class="line">  <span class="number">12</span>  Windows XP SP2 Czech (NX)</span><br><span class="line">  <span class="number">13</span>  Windows XP SP2 Danish (NX)</span><br><span class="line">  <span class="number">14</span>  Windows XP SP2 German (NX)</span><br><span class="line">  <span class="number">15</span>  Windows XP SP2 Greek (NX)</span><br><span class="line">  <span class="number">16</span>  Windows XP SP2 Spanish (NX)</span><br><span class="line">  <span class="number">17</span>  Windows XP SP2 Finnish (NX)</span><br><span class="line">  <span class="number">18</span>  Windows XP SP2 French (NX)</span><br><span class="line">  <span class="number">19</span>  Windows XP SP2 Hebrew (NX)</span><br><span class="line">  <span class="number">20</span>  Windows XP SP2 Hungarian (NX)</span><br><span class="line">  <span class="number">21</span>  Windows XP SP2 Italian (NX)</span><br><span class="line">  <span class="number">22</span>  Windows XP SP2 Japanese (NX)</span><br><span class="line">  <span class="number">23</span>  Windows XP SP2 Korean (NX)</span><br><span class="line">  <span class="number">24</span>  Windows XP SP2 Dutch (NX)</span><br><span class="line">  <span class="number">25</span>  Windows XP SP2 Norwegian (NX)</span><br><span class="line">  <span class="number">26</span>  Windows XP SP2 Polish (NX)</span><br><span class="line">  <span class="number">27</span>  Windows XP SP2 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">28</span>  Windows XP SP2 Portuguese (NX)</span><br><span class="line">  <span class="number">29</span>  Windows XP SP2 Russian (NX)</span><br><span class="line">  <span class="number">30</span>  Windows XP SP2 Swedish (NX)</span><br><span class="line">  <span class="number">31</span>  Windows XP SP2 Turkish (NX)</span><br><span class="line">  <span class="number">32</span>  Windows XP SP3 Arabic (NX)</span><br><span class="line">  <span class="number">33</span>  Windows XP SP3 Chinese - Traditional / Taiwan (NX)</span><br><span class="line">  <span class="number">34</span>  Windows XP SP3 Chinese - Simplified (NX)</span><br><span class="line">  <span class="number">35</span>  Windows XP SP3 Chinese - Traditional (NX)</span><br><span class="line">  <span class="number">36</span>  Windows XP SP3 Czech (NX)</span><br><span class="line">  <span class="number">37</span>  Windows XP SP3 Danish (NX)</span><br><span class="line">  <span class="number">38</span>  Windows XP SP3 German (NX)</span><br><span class="line">  <span class="number">39</span>  Windows XP SP3 Greek (NX)</span><br><span class="line">  <span class="number">40</span>  Windows XP SP3 Spanish (NX)</span><br><span class="line">  <span class="number">41</span>  Windows XP SP3 Finnish (NX)</span><br><span class="line">  <span class="number">42</span>  Windows XP SP3 French (NX)</span><br><span class="line">  <span class="number">43</span>  Windows XP SP3 Hebrew (NX)</span><br><span class="line">  <span class="number">44</span>  Windows XP SP3 Hungarian (NX)</span><br><span class="line">  <span class="number">45</span>  Windows XP SP3 Italian (NX)</span><br><span class="line">  <span class="number">46</span>  Windows XP SP3 Japanese (NX)</span><br><span class="line">  <span class="number">47</span>  Windows XP SP3 Korean (NX)</span><br><span class="line">  <span class="number">48</span>  Windows XP SP3 Dutch (NX)</span><br><span class="line">  <span class="number">49</span>  Windows XP SP3 Norwegian (NX)</span><br><span class="line">  <span class="number">50</span>  Windows XP SP3 Polish (NX)</span><br><span class="line">  <span class="number">51</span>  Windows XP SP3 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">52</span>  Windows XP SP3 Portuguese (NX)</span><br><span class="line">  <span class="number">53</span>  Windows XP SP3 Russian (NX)</span><br><span class="line">  <span class="number">54</span>  Windows XP SP3 Swedish (NX)</span><br><span class="line">  <span class="number">55</span>  Windows XP SP3 Turkish (NX)</span><br><span class="line">  <span class="number">56</span>  Windows <span class="number">2003</span> SP1 English (NO NX)</span><br><span class="line">  <span class="number">57</span>  Windows <span class="number">2003</span> SP1 English (NX)</span><br><span class="line">  <span class="number">58</span>  Windows <span class="number">2003</span> SP1 Japanese (NO NX)</span><br><span class="line">  <span class="number">59</span>  Windows <span class="number">2003</span> SP1 Spanish (NO NX)</span><br><span class="line">  <span class="number">60</span>  Windows <span class="number">2003</span> SP1 Spanish (NX)</span><br><span class="line">  <span class="number">61</span>  Windows <span class="number">2003</span> SP1 French (NO NX)</span><br><span class="line">  <span class="number">62</span>  Windows <span class="number">2003</span> SP1 French (NX)</span><br><span class="line">  <span class="number">63</span>  Windows <span class="number">2003</span> SP2 English (NO NX)</span><br><span class="line">  <span class="number">64</span>  Windows <span class="number">2003</span> SP2 English (NX)</span><br><span class="line">  <span class="number">65</span>  Windows <span class="number">2003</span> SP2 German (NO NX)</span><br><span class="line">  <span class="number">66</span>  Windows <span class="number">2003</span> SP2 German (NX)</span><br><span class="line">  <span class="number">67</span>  Windows <span class="number">2003</span> SP2 Portuguese - Brazilian (NX)</span><br><span class="line">  <span class="number">68</span>  Windows <span class="number">2003</span> SP2 Spanish (NO NX)</span><br><span class="line">  <span class="number">69</span>  Windows <span class="number">2003</span> SP2 Spanish (NX)</span><br><span class="line">  <span class="number">70</span>  Windows <span class="number">2003</span> SP2 Japanese (NO NX)</span><br><span class="line">  <span class="number">71</span>  Windows <span class="number">2003</span> SP2 French (NO NX)</span><br><span class="line">  <span class="number">72</span>  Windows <span class="number">2003</span> SP2 French (NX)</span><br><span class="line"></span><br><span class="line">Basic options:</span><br><span class="line">  Name     Current Setting  Required  Description</span><br><span class="line">  ----     ---------------  --------  -----------</span><br><span class="line">  RHOST                     yes       The target address</span><br><span class="line">  RPORT    <span class="number">445</span>              yes       Set the SMB service port</span><br><span class="line">  SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)</span><br><span class="line"></span><br><span class="line">Payload information:</span><br><span class="line">  Space: <span class="number">410</span></span><br><span class="line">  Avoid: <span class="number">8</span> characters</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">  This module exploits a parsing flaw <span class="keyword">in</span> the path canonicalization</span><br><span class="line">  code of NetAPI32.dll through the Server Service. This module is</span><br><span class="line">  capable of bypassing NX on some operating systems and service packs.</span><br><span class="line">  The correct target must be used to prevent the Server Service (along</span><br><span class="line">  with a dozen others <span class="keyword">in</span> the same process) from crashing. Windows XP</span><br><span class="line">  targets seem to handle multiple successful exploitation events, but</span><br><span class="line">  <span class="number">2003</span> targets will often crash or hang on subsequent attempts. This</span><br><span class="line">  is just the first version of this module, full support <span class="keyword">for</span> NX bypass</span><br><span class="line">  on <span class="number">2003</span>, along with other platforms, is still <span class="keyword">in</span> development.</span><br><span class="line"></span><br><span class="line">References:</span><br><span class="line">  http://cvedetails.com/cve/<span class="number">2008</span>-<span class="number">4250</span>/</span><br><span class="line">  http://www.osvdb.org/<span class="number">49243</span></span><br><span class="line">  http://technet.microsoft.com/en-us/security/bulletin/MS08-<span class="number">067</span></span><br><span class="line">  http://www.rapid7.com/vulndb/lookup/dcerpc-ms-netapi-netpathcanonicalize-dos</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Penetration-Testing/">Penetration Testing</a></li></ul>
     </div>
 
       
