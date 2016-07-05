@@ -249,7 +249,7 @@
           
         <h3 id="首先先检查依赖环境"><a href="#首先先检查依赖环境" class="headerlink" title="首先先检查依赖环境"></a>首先先检查依赖环境</h3><p>pam-devel openssl-devel zlib-devel krb5-devel</p>
 <p>Zlib 1.1.4 or 1.2.1.2 or greater</p>
-<h3 id="卸载之前安装的openssl"><a href="#卸载之前安装的openssl" class="headerlink" title="卸载之前安装的openssl"></a>卸载之前安装的openssl</h3><p>rpm -e <code>rpm -qa | grep openssl</code> –allmatches -nodeps</p>
+<h3 id="卸载之前安装的openssl"><a href="#卸载之前安装的openssl" class="headerlink" title="卸载之前安装的openssl"></a>卸载之前安装的openssl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="operator">-e</span> `rpm -qa | grep openssl` --allmatches -nodeps</span><br></pre></td></tr></table></figure>
 <h3 id="解压我给你们的两个包"><a href="#解压我给你们的两个包" class="headerlink" title="解压我给你们的两个包"></a>解压我给你们的两个包</h3><p>tar -xzvf [Packege name]</p>
 <h3 id="编译安装OpenSSl"><a href="#编译安装OpenSSl" class="headerlink" title="编译安装OpenSSl"></a>编译安装OpenSSl</h3><p>注意参数<br> （1）./config –prefix=/usr –shared<br> 注意，一定要加上–shared选项，否则openssh编译时候会找不到openssl的<br> library<br> 这部我这边出现了一个make depend报警，忽略即可</p>
 <p> （2）安装<br>    make &amp;&amp; make install<br>  (3)验证安装是否成功<br>    openssl version -a</p>
