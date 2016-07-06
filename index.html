@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 10px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,69 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-IBM-AIX-6-install-Openssh-7-2p2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/06/IBM-AIX-6-install-Openssh-7-2p2/" class="article-date">
+      <time datetime="2016-07-06T07:20:05.000Z" itemprop="datePublished">2016-07-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/06/IBM-AIX-6-install-Openssh-7-2p2/">IBM AIX 6 install Openssh 7.2p2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="我先安装了zlib"><a href="#我先安装了zlib" class="headerlink" title="我先安装了zlib"></a>我先安装了zlib</h3><p>zlib 安装的版本是1.2.8，源代码可以从zlib的官网上下载<br><a href="http://www.zlib.net/" target="_blank" rel="external">Zlib</a><br>基本的步骤都是解包，然后./configure make &amp;&amp; make install</p>
+<h3 id="安装Openssh7-2p2"><a href="#安装Openssh7-2p2" class="headerlink" title="安装Openssh7.2p2"></a>安装Openssh7.2p2</h3><p>这个步骤稍微复杂，我遇到一个错误，找到问题修改了源代码中几个地方<br>从openssh包中找到一个叫做sshbuf-getput-basic.c 的C文件<br>用VI编辑器打开，从代码中将所有va_copy替换成VA_COPY，我们可以使用vi编辑器<br>快捷键实现批量替换，<a href="">%s?va_copy?VA_COPY</a>,完成之后在代码宏定义下面加入<br>下面条件语句.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef VA_COPY</span></span><br><span class="line"><span class="comment"># ifdef HAVE_VA_COPY</span></span><br><span class="line"><span class="comment">#  define VA_COPY(dest, src) va_copy(dest, src)</span></span><br><span class="line"><span class="comment"># else</span></span><br><span class="line"><span class="comment">#  ifdef HAVE___VA_COPY</span></span><br><span class="line"><span class="comment">#   define VA_COPY(dest, src) __va_copy(dest, src)</span></span><br><span class="line"><span class="comment">#  else</span></span><br><span class="line"><span class="comment">#   define VA_COPY(dest, src) (dest) = (src)</span></span><br><span class="line"><span class="comment">#  endif</span></span><br><span class="line"><span class="comment"># endif</span></span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure>
+<p>全部修改完毕后，进行./configure,然后没有报错就可以进项make &amp;&amp; make install</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>我这边的openssl没有升级，因为之前有安装过openssh所以一些依赖关系存在，还有<br>C编译器在我这边的AIX6里面是安装的，如果遇到无法gcc需要额外安装gcc编译器</p>
+<p>Hope u enjoy！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AIX/">AIX</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Update-Openssh-7-2p2-on-Redhat-5" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -757,72 +820,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TCP" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/21/TCP/" class="article-date">
-      <time datetime="2016-06-21T08:55:33.000Z" itemprop="datePublished">2016-06-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/21/TCP/">TCP</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Introduction-blablabla…"><a href="#Introduction-blablabla…" class="headerlink" title="Introduction blablabla…"></a>Introduction blablabla…</h3><p>TCP provides session management.</p>
-<p>A new TCP session is initialized by the famous Three-Way-Handshake</p>
-<p>TCP-flags</p>
-<p>SYN– Ask for a new connection<br>ACK– Acknowledge the receipt of a packet<br>RST– Cancel a connection attempt (is usually send when a host tries to<br>      connect to a closed port)<br>FIN– Cleanly close an established connection (must be acknowledged by<br>      counterpart)<br>URG– Mark a packet as urgent<br>PSH– Bid the receiver to handle packet with higher priority</p>
-<h3 id="An-Example-Network"><a href="#An-Example-Network" class="headerlink" title="An Example Network"></a>An Example Network</h3><p>An Ethernet/TCP/IP network is what you nowadays think of if you hear the term<br>network,because it is by far the most common one. Its constructed of five layers<br>instead of the theoretical seven layers of the ISO/OSI model. For short refreshing:<br>Ethernet is on layer 2, IP(Internet Protocol) on layer 3, TCP(Transport Control<br>  Protocol) or UDP on layer 4-6 and services like HTTP,SMTP,FTP on layer 7.</p>
-<h3 id="How-a-HTTP-packet-passes-all-those-layers-one-after-another"><a href="#How-a-HTTP-packet-passes-all-those-layers-one-after-another" class="headerlink" title="How a HTTP packet passes all those layers one after another."></a>How a HTTP packet passes all those layers one after another.</h3><p>We want to get the index page of www.google.com .<br>(1) Our computer parses the URL www.google.com into the following components:<br>    HTTP as application protocol to be used.<br>    the hostname www<br>    the domain google<br>    the Top-Level-Domain com<br>    /</p>
-<p>(2) Armed with these information our computer constructs the following HTTP-Header(Layer 7):<br>    GET / HTTP 1.1<br>    Host: www.google.com</p>
-<p>(3) Next we head on to TCP (layer 4-6). It establishes a connection by the use of the<br>    Three-Way-Handshake addressing the destination port 80(HTTP) and a random source<br>    port to connect the browser with the network.</p>
-<p>(4) IP (layer 3) recognize that it cannot use www.google.com for addressing since it can only<br>    use IP addresses such as 12.34.56.78 so it makes a DNS query to resolve the IP for the<br>    hostname.<br>    Now IP checks if the destination host is in the same network as our computer.<br>    This is not the case therefore a lookup into the routing table is necessary to retrieve<br>    the address of the next hop.</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
     </div>
 
       

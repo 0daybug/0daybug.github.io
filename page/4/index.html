@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 10px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,69 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-内网图片获取" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/29/内网图片获取/" class="article-date">
+      <time datetime="2016-02-29T09:25:27.000Z" itemprop="datePublished">2016-02-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/29/内网图片获取/">内网图片获取</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">攻击:VMware Fusion--虚拟机Kali Linux</span><br><span class="line">受害机:本机 系统: OS X EI Capitan</span><br></pre></td></tr></table></figure>
+<h3 id="攻击条件"><a href="#攻击条件" class="headerlink" title="攻击条件"></a>攻击条件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google</span><br></pre></td></tr></table></figure>
+<h3 id="攻击所需工具"><a href="#攻击所需工具" class="headerlink" title="攻击所需工具"></a>攻击所需工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.arpspoof</span><br><span class="line"><span class="number">2</span>.driftnet</span><br></pre></td></tr></table></figure>
+<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.获取必要IP地址</span><br><span class="line">Kali Linux 使用ifconfig 命令查看本地IP以及网关地址</span><br><span class="line">OS X 地址</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.使用Arpspoof -i eth0 -t <span class="number">192.168</span>.<span class="number">1.1</span> <span class="number">192.168</span>.<span class="number">1.111</span></span><br><span class="line">这边解释一下,eth0为Kali Linux本地网卡设备,<span class="number">192.168</span>.<span class="number">1.1</span>为我的网关地址, <span class="number">192.168</span>.<span class="number">1.111</span> 为OS X（受害者地址）</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.driftnet -i eth0 用来获取受害者图片</span><br><span class="line">这条命令执行完成后会弹出窗口，如果那时候受害者正在浏览图片，那么这个窗口就会显示相应图片，这样子 如果一个妹子和你正在同一个局域网内，而恰好她正在浏览自己的私密相册，那么嘿嘿嘿...至于嘿嘿嘿是什么我就不细说了，zzz</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个测试还是可以自己动手玩玩的，其实其中的原理也相当简单，就是简单的ARP欺骗，但是还是挺好用的zz...</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://weibo.com/styhunger" target="_blank" rel="external">Weibo</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-渗透测试流程" class="article article-type-post" itemscope itemprop="blogPost">
   
