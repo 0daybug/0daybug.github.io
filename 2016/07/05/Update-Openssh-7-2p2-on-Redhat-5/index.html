@@ -19,7 +19,7 @@ Zlib 1.1.4 or 1.2.1.2 or greater
 卸载之前安装的openssl1rpm -e `rpm -qa | grep openssl` --allmatches -nodeps
 解压我给你们的两个包tar -xzvf [Packege name]
 编译安装OpenS">
-<meta property="og:updated_time" content="2016-07-05T04:28:42.000Z">
+<meta property="og:updated_time" content="2016-07-07T07:51:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Update Openssh 7.2p2 on Redhat 5">
 <meta name="twitter:description" content="首先先检查依赖环境pam-devel openssl-devel zlib-devel krb5-devel
@@ -270,10 +270,9 @@ Zlib 1.1.4 or 1.2.1.2 or greater
 <p>Zlib 1.1.4 or 1.2.1.2 or greater</p>
 <h3 id="卸载之前安装的openssl"><a href="#卸载之前安装的openssl" class="headerlink" title="卸载之前安装的openssl"></a>卸载之前安装的openssl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="operator">-e</span> `rpm -qa | grep openssl` --allmatches -nodeps</span><br></pre></td></tr></table></figure>
 <h3 id="解压我给你们的两个包"><a href="#解压我给你们的两个包" class="headerlink" title="解压我给你们的两个包"></a>解压我给你们的两个包</h3><p>tar -xzvf [Packege name]</p>
-<h3 id="编译安装OpenSSl"><a href="#编译安装OpenSSl" class="headerlink" title="编译安装OpenSSl"></a>编译安装OpenSSl</h3><p>注意参数<br> （1）./config –prefix=/usr –shared<br> 注意，一定要加上–shared选项，否则openssh编译时候会找不到openssl的<br> library<br> 这部我这边出现了一个make depend报警，忽略即可</p>
+<h3 id="编译安装OpenSSl"><a href="#编译安装OpenSSl" class="headerlink" title="编译安装OpenSSl"></a>编译安装OpenSSl</h3><p>注意参数<br>注意使用root权限<br> （1）./config –prefix=/usr –shared<br> 注意，一定要加上–shared选项，否则openssh编译时候会找不到openssl的<br> library<br> 这部我这边出现了一个make depend报警，忽略即可</p>
 <p> （2）安装<br>    make &amp;&amp; make install<br>  (3)验证安装是否成功<br>    openssl version -a</p>
-<h3 id="编译安装Openssh"><a href="#编译安装Openssh" class="headerlink" title="编译安装Openssh"></a>编译安装Openssh</h3><p>  （1）配置<br>    ./configure –prefix=/usr –with-pam –with-zlib –with-md5-passwords<br>  （2）安装<br>    make &amp;&amp; make install<br>   (3)检查OpenSSH<br>   ssh -V</p>
-<p>   注意点：安装的配置文件在/usr/etc/sshd_config<br>   安装完ssh要重新生成一个key 之前保存在其他机器中的key不能使用得先删掉<br>   然后让ssh重新获取！！！<br>   生成key的命令ssh-keygen -t rsa</p>
+<h3 id="编译安装Openssh"><a href="#编译安装Openssh" class="headerlink" title="编译安装Openssh"></a>编译安装Openssh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）配置</span><br><span class="line">  ./configure --prefix=/usr --with-pam</span><br><span class="line">   --with-zlib --with-md5-passwords</span><br><span class="line">（<span class="number">2</span>）安装</span><br><span class="line">  make &amp;&amp; make install</span><br><span class="line"> (<span class="number">3</span>)检查OpenSSH</span><br><span class="line"> ssh -V</span><br><span class="line"></span><br><span class="line"> 注意点：安装的配置文件在/usr/etc/sshd_config</span><br><span class="line"> 安装完ssh要重新生成一个key 之前保存在其他机器中的key不能使用得先删掉</span><br><span class="line"> 然后让ssh重新获取！！！</span><br><span class="line"> 生成key的命令ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -285,7 +284,7 @@ Zlib 1.1.4 or 1.2.1.2 or greater
         <p><span>本文标题:</span><a href="/2016/07/05/Update-Openssh-7-2p2-on-Redhat-5/">Update Openssh 7.2p2 on Redhat 5</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
         <p><span>发布时间:</span>2016年07月05日 - 12时07分</p>
-        <p><span>最后更新:</span>2016年07月05日 - 12时28分</p>
+        <p><span>最后更新:</span>2016年07月07日 - 15时51分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/05/Update-Openssh-7-2p2-on-Redhat-5/" title="Update Openssh 7.2p2 on Redhat 5">http://0daybug.github.io/2016/07/05/Update-Openssh-7-2p2-on-Redhat-5/</a>
             <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/07/05/Update-Openssh-7-2p2-on-Redhat-5/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
