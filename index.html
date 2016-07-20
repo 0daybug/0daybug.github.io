@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/AIX/" style="font-size: 10px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,230 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-SocketProgram" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/20/SocketProgram/" class="article-date">
+      <time datetime="2016-07-20T12:50:16.000Z" itemprop="datePublished">2016-07-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/20/SocketProgram/">SocketProgram</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_machine_info</span><span class="params">()</span>:</span></span><br><span class="line">    host_name = socket.gethostname()</span><br><span class="line">    ip_address = socket.gethostbyname(host_name)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Host name: %s"</span>%host_name</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"IP address: %s"</span>%ip_address</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    print_machine_info()</span><br></pre></td></tr></table></figure>
+<p>Running this script,we will get the basic info about our machine</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_remote_machine_info</span><span class="params">()</span>:</span></span><br><span class="line">    remote_host = <span class="string">'www.fuckbaidu.com'</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"IP address: %s"</span>%socket.gethostbyname(remote_host)</span><br><span class="line">    <span class="keyword">except</span> socket.error,err_msg:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"%s: %s"</span>%(remote_host, err_msg)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    get_remote_machine_info()</span><br></pre></td></tr></table></figure>
+<p>The Python socket library has utilities to deal with the various<br>IP address format.Here,we will use two of them:inet_aton() and<br>inet_ntoa()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">from</span> binascii <span class="keyword">import</span> hexlify</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert_ip4_address</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> ip_addr <span class="keyword">in</span> [<span class="string">'127.0.0.1'</span>,<span class="string">'192.168.1.1'</span>]:</span><br><span class="line">        packed_ip_addr = socket.inet_aton(ip_addr)</span><br><span class="line">        unpacked_ip_addr = socket.inet.ntoa(ip_addr)</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"IP address: %s =&gt; Packed:%s, Unpacked:%s"</span>%(ip_addr,hexlify(packed_ip_addr), unpacked_ip_addr)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    convert_ip4_address()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Socket/">Socket</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Samba-AIX-solutions" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/Samba-AIX-solutions/" class="article-date">
+      <time datetime="2016-07-15T05:59:55.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/Samba-AIX-solutions/">Samba AIX solutions</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>SAMBA:</p>
+<h2 id="——————————————————————————–"><a href="#——————————————————————————–" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>SAMBA CLIENT ALL:</p>
+<p>install SAMBA:</p>
+<p>bos.cifs_fs.5.3.0.0.I<br>bos.cifs_fs.rte.5.3.0.62.U</p>
+<h2 id="bos-cifs-fs-smit-5-3-0-60-bff"><a href="#bos-cifs-fs-smit-5-3-0-60-bff" class="headerlink" title="bos.cifs_fs.smit.5.3.0.60.bff"></a>bos.cifs_fs.smit.5.3.0.60.bff</h2><p>smitty cifs_fs</p>
+<p>lscifsmnt<br>rmcifsmnt -f /smb_mnt<br>mkcifsmnt -f /mnt -d share1 -h server1 -c user1</p>
+<hr>
+<p>smitty cifs_fs:<br>first it will do in read-only, later have to come back again and set it again<br>If Share name is like this: \server name\share name, it is enough to write “share name” (\server.. not needed)</p>
+<pre><code>[Entry Fields]
+</code></pre><ul>
+<li>Pathname of mount point                             /homes/ftp/Test<br>SERVER name                                        [10.10.40.10]<br>User Name                                          [SSH01]<br>Password                                           []<br>Share name                                         [Test]        &lt;–what has been shared on the other system<br>Mount as a READ-ONLY system                        [no]          &lt;–first it will be read-only, come back again                                                                                                        +<br>uid                                                [6027083]<br>gid                                                [6000116]<br>Mode                                               [777]<br>Domain to Authenticate against                     []            &lt;–once on windows I had to set here: ads<br>Remount now, add change to /etc/filesystems,       [Both]<pre><code>or both
+</code></pre>/etc/filesystems entry will mount on start         [no]<br>Mount Type name                                    []</li>
+</ul>
+<p>After these the credential file has to be set as well:<br>smitty cifs_fs -&gt; Credential configuration</p>
+<p>/etc/cifs_fs/cifscred file      allows future mounting of CIFS shares with stored credentials<br>lscifscred                lists the server or user entries stored in the /etc/cifs_fs/cifscred file (mkcifscred, rmcifscred, chcifscred)</p>
+<hr>
+<p>other methods:<br>/usr/sbin/mkcifsmnt -t rw -f /homes/ftp/29/test -d test -h 10.10.15.24 -c SSG01 -p xyz -u 32292 -g 6000116 -x 777<br>mount -v cifs -n 10.10.15.24/SSG01/xyz -o uid=32292,gid=200,fmode=775 test /homes/ftp/29/test</p>
+<hr>
+<p>Once on Win side had to change something in order to work:<br>“I have changed something on the server - from “Send NTLMv2 response only. Refuse LM  NTLM” to “ Send LM &amp; NTLM - use NTLMv2 session security if negotiated” So I hope, this fixes the problem”</p>
+<h2 id="——————————————————————————–-1"><a href="#——————————————————————————–-1" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<h2 id="——————————————————————————–-2"><a href="#——————————————————————————–-2" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>SAMBA SERVER ALL:</p>
+<p>Needed ports:</p>
+<p>netbios-ns        137/tcp           # NETBIOS Name Service<br>netbios-ns        137/udp           # NETBIOS Name Service<br>netbios-dgm       138/tcp           # NETBIOS Datagram Service<br>netbios-dgm       138/udp           # NETBIOS Datagram Service<br>netbios-ssn       139/tcp           # NETBIOS Session Service<br>netbios-ssn       139/udp           # NETBIOS Session Service</p>
+<p>microsoft-ds      445/tcp           # Microsoft-DS<br>microsoft-ds      445/udp           # Microsoft-DS</p>
+<p>netbios is Windows file &amp; printer sharing</p>
+<p>Microsoft-DS (Microsoft Directory Services) is a port used for file sharing. It was introduced with Windows 2000 and gives you the possibility to use SMB protocol (stands for Server Message Block, but is also known as Samba) directly over TCP-IP on port 445.</p>
+<p>In www.samba.org, written this:<br>UDP/137    - used by nmbd<br>UDP/138    - used by nmbd<br>TCP/139    - used by smbd<br>TCP/445    - used by smbd</p>
+<p>INSTALL:</p>
+<p>/mnt/MISC/SAMBA<br>-rwxrwxrwx   1 root     sys        67379200 Jun 28 2005  samba-3.0.4.0.bff</p>
+<p>smitty install:<br>root@aix31: /mnt/MISC/SAMBA # lslpp -l | grep -i samba<br>  freeware.samba.rte         3.0.4.0  COMMITTED  Samba Version 3.0.4</p>
+<hr>
+<p>SWAT (SAMBA Web Administartion Tool) configuration: (not necessary, only if you want it)<br>It is a GUI for SAMBA, a web browser is needed for SWAT, and X11 as well.</p>
+<p>/etc/services:<br>swat    901/tcp</p>
+<p>/etc/inetd.conf:<br>swat    stream  tcp     nowait  root    /usr/local/samba/sbin/swat      swat</p>
+<p>in browser:</p>
+<h2 id="http-localhost-901"><a href="#http-localhost-901" class="headerlink" title="http://localhost:901"></a><a href="http://localhost:901" target="_blank" rel="external">http://localhost:901</a></h2><p>SAMBA tools:</p>
+<p>install dir: /usr/local/samba</p>
+<p>/usr/local/samba/sbin/nmbd                &lt;–provides netbios nameserver supports to clients (nameserver for samba)<br>/usr/local/samba/sbin/smbd                &lt;–smb daemon<br>/usr/local/samba/sbin/smbd -b             &lt;–shows configuration infos. i.e.: path for the config file: smbd -b|grep smb.conf<br>/usr/local/samba/bin/smbstatus            &lt;–shows actual sharings and connections<br>/usr/local/samba/bin/testparm             &lt;–test the smb.conf file for any typo<br>/usr/local/samba/bin/pdbedit -a user123   &lt;–creates users (on AIX I created before)<br>/usr/local/samba/bin/smbpasswd            &lt;–changes pw (-a: add a user who can access the shares from a client)<br>/usr/local/samba/bin/smbclient            &lt;–it is an SMB client program for UNIX machines, it provides an ftp like interface,</p>
+<pre><code>to transfer files between a windows &apos;server&apos; and a unix &apos;client&apos;
+</code></pre><hr>
+<p>PROCESS OF SAMBA CONFIGURATION:</p>
+<ol>
+<li><p>check ports: a 137,138,139,445 (if needed firewall opening)<br>rpcinfo, telnet</p>
+</li>
+<li><p>check where is smb.conf:<br>/usr/local/samba/sbin/smbd -b               &lt;–shows version of SAMBA etc.,and the path to smb.conf</p>
+</li>
+<li><p>edit smb.conf:<br>/usr/local/samba/lib/smb.conf (it is a link to /etc/samba/smb.conf)</p>
+</li>
+</ol>
+<p>Create a similar entry:</p>
+<p>[samba_share]                               &lt;–use this name for connection<br>        comment = share test                &lt;–anything can be written here<br>        path = /home/samba_share            &lt;–path of the dir what we want to share<br>        read only = no<br>        guest ok = yes<br>        read list = user123                 &lt;–users who will be able to read it (space separated)<br>        write list = user123                &lt;–users who will be able to write to it (space separated)</p>
+<p>Important:<br>-check owner,rights of the given directory (in the path)<br>-after chacnging the conf file, daemons have to be restarted in order changes be refreshed</p>
+<hr>
+<p>this is good for read only:<br>[samba_share]<br>   comment = share test<br>   path = /home/samba_share<br>   read only = no</p>
+<h2 id="guest-ok-yes"><a href="#guest-ok-yes" class="headerlink" title="   guest ok = yes"></a>   guest ok = yes</h2><p>3.SAMBA user creation:<br>/usr/local/samba/bin/smbpasswd -a user123                  &lt;– -a: add user as well</p>
+<p>Same user has to be created, to what we gave in the conf file</p>
+<p>For root we can create one:<br>/usr/local/samba/bin/smbpasswd -a root<br>(root passw is needed)</p>
+<ol>
+<li>testing smb.conf:<br>/usr/local/samba/bin/testparm                              &lt;–test the smb.conf file for any typo (default conf file)</li>
+</ol>
+<p>testing not the default conf file:<br>/usr/local/samba/bin/testparm /etc/samba/smb.conf</p>
+<ol>
+<li><p>starting daemons:<br>/usr/local/samba/sbin/smbd -D                              &lt;– -D: handling it as daemon (this is the default)<br>/usr/local/samba/sbin/nmbd -D</p>
+</li>
+<li><p>connecting to SAMBA:</p>
+</li>
+</ol>
+<p>LOCALLY (AIX):<br>/usr/local/samba/bin/smbclient //localhost/samba_share     &lt;–samba_share: which has been created in conf file</p>
+<p>password is what has been created with smbpasswd for the user<br>if not root user, than check permissions of the conf file (if needed give read permission)</p>
+<p>another way: /usr/local/samba/bin/smbclient -U% -L localhost</p>
+<p>REMOTELY (WINDOWS):<br>(tools-&gt;map network drive-&gt;choose a drive)<br>the command: \10.10.101.78\samba_share                    &lt;–it will map that directory</p>
+<p>“Connect using a different username”: If on Windows and AIX users are identical this is not needed.<br>If user/pw created in SAMBA is different of the actual windows user/pw, then here we can give the SAMBA user/pw.</p>
+<ol>
+<li>Checks, tests:<br>/usr/local/samba/bin/smbstatus                             &lt;–shows connections (if we could connect)</li>
+</ol>
+<p>/usr/local/samba/bin/smbclient -L 10.10.101.78             &lt;–shows which shares are available on a given host</p>
+<p>!!!2 different SAMBA version (rpm and a fileset one) should no be installed at the same time (daemons did not started for me)!!!!</p>
+<h2 id="——————————————————————————–-3"><a href="#——————————————————————————–-3" class="headerlink" title="——————————————————————————–"></a>——————————————————————————–</h2><hr>
+<p>I had this error:<br>(Samba was installed from rpm and it was started from inetd.)</p>
+<h1 id="smbclient-L-localhost-U"><a href="#smbclient-L-localhost-U" class="headerlink" title="smbclient -L localhost -U "></a>smbclient -L localhost -U <user></user></h1><p>added interface ip=10.10.10.8 bcast=10.10.35.31 nmask=255.255.255.224<br>session request to LOCALHOST failed (Call returned zero bytes (EOF)<br>)<br>session request to *SMBSERVER failed (Call returned zero bytes (EOF)<br>)</p>
+<ol>
+<li><p>check samba logs (I turned this on)<br>vi /etc/inetd.conf: netbios-ssn stream tcp nowait root /usr/sbin/smbd -l /var/log/samba.log smbd<br>refresh -s inetd<br>(probably in syslog you can find where it is logging)</p>
+</li>
+<li><p>cat samba.log<br>…<br>[2012/10/11 09:20:11, 0] tdb/tdbutil.c:tdb_log(531)<br>tdb(/etc/secrets.tdb): rec_free_read bad magic 0x2f73616d at offset=812    &lt;–shows problems with /etc/secrets.tdb<br>[2012/10/11 09:20:11, 0] passdb/machine_sid.c:pdb_generate_sam_sid(163)<br>pdb_generate_sam_sid: Failed to store generated machine SID.<br>[2012/10/11 09:20:11, 0] smbd/server.c:main(793)<br>ERROR: Samba cannot create a SAM SID.</p>
+</li>
+<li><p>stop samba<br>vi /etc/inetd.conf -&gt; comment lines smbd, nmbd<br>refresh -s inetd</p>
+</li>
+<li><p>remove /etc/secrets.tdb<br>mv /etc/secrets.tdb /etc/secrets.tdb.old</p>
+</li>
+<li><p>start samba<br>vi /etc/inetd.conf -&gt; uncomment smbd, nmbd lines<br>refresh -s inetd</p>
+</li>
+<li><p>test login</p>
+<h1 id="smbclient-L-localhost-U-1"><a href="#smbclient-L-localhost-U-1" class="headerlink" title="smbclient -L localhost -U "></a>smbclient -L localhost -U <user></user></h1><p>added interface ip=10.10.10.8 bcast=10.10.35.31 nmask=255.255.255.224<br>Password:</p>
+</li>
+</ol>
+<hr>
+<p>I had this “error”:</p>
+<h1 id="smbstatus"><a href="#smbstatus" class="headerlink" title="smbstatus"></a>smbstatus</h1><p>Samba version 2.2.7</p>
+<h2 id="Service-uid-gid-pid-machine"><a href="#Service-uid-gid-pid-machine" class="headerlink" title="Service      uid      gid      pid     machine"></a>Service      uid      gid      pid     machine</h2><p>Failed to open byte range locking database<br>ERROR: Failed to initialise locking database<br>Can’t initialise locking module - exiting</p>
+<p>This is not an error after first successful login it will be OK.<br>I did: smbclient -L localhost -U <user><br>After that: smbstatus</user></p>
+<p>Samba version 2.2.7</p>
+<h2 id="Service-uid-gid-pid-machine-1"><a href="#Service-uid-gid-pid-machine-1" class="headerlink" title="Service      uid      gid      pid     machine"></a>Service      uid      gid      pid     machine</h2><p>No locked files</p>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AIX/">AIX</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-IBM-AIX-6-install-Openssh-7-2p2" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -699,126 +923,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Understanding-Network-Hacks/">Understanding Network Hacks</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-SQL-Injection" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/22/SQL-Injection/" class="article-date">
-      <time datetime="2016-06-22T05:14:33.000Z" itemprop="datePublished">2016-06-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/22/SQL-Injection/">SQL Injection</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Bypass-a-Path-Based-Access-Control-Scheme" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/" class="article-date">
-      <time datetime="2016-06-21T15:32:52.000Z" itemprop="datePublished">2016-06-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/21/Bypass-a-Path-Based-Access-Control-Scheme/">Bypass a Path Based Access Control Scheme</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="WebGoat里的一道题目"><a href="#WebGoat里的一道题目" class="headerlink" title="WebGoat里的一道题目"></a>WebGoat里的一道题目</h3><p>描述：</p>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/1.png" alt=""></p>
-<p>分析目录<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/2.png" alt=""></p>
-<p>准备工具Tamper<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/3.png" alt=""></p>
-<p>启动Tamper(类似burpsuite功能)，选中Basic那个页面点击View File<br>请求后，Tamper会类似劫持<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/4.png" alt=""></p>
-<p>我们可以看到View File会向服务端请求这个页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/5.png" alt=""></p>
-<p>我们修改这个路径<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/7.png" alt=""></p>
-<p>确定后,Tamper会把修改后的请求发送给服务器端，服务器端<br>将会返回我们规定的请求页面<br><img src="http://7xs1w6.com1.z0.glb.clouddn.com/8.png" alt=""></p>
-<p>造成这个原因有可能是中间件配置不当，导致该目录文件权限配置不当</p>
-<p><a href="http://drops.wooyun.org/web/13594" target="_blank" rel="external">WooYun Reference</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
     </div>
 
       

