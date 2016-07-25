@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Problems/" style="font-size: 10px;">Problems</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,83 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-List-in-Python" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/07/List-in-Python/" class="article-date">
+      <time datetime="2016-06-07T14:52:46.000Z" itemprop="datePublished">2016-06-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/07/List-in-Python/">List in Python</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>list中指定位置增加元素</p>
+<p>name.insert(1, “hello”) 表示在name的第1元素后加入 （从第0开始计算）<br>append表示在最后追加</p>
+<p>name.remove(“hello”) 删除hello</p>
+<p>pop方法 弹出<br>List.pop(0) 弹出第0号元素</p>
+<p>关于copy操作一个很有意思的现象</p>
+<p>name = [‘alex’,’jack’,[1,2,3,34]]<br>name1 = name.copy()<br>name1[0] = ‘ALEX’<br>name1[2][1] = 11111</p>
+<p>print(name)<br>print(name1)</p>
+<p>其中输出结果为<br>like$python3 copytest.py<br>[‘alex’, ‘jack’, [1, 11111, 3, 34]]<br>[‘ALEX’, ‘jack’, [1, 11111, 3, 34]]<br>like$</p>
+<p>我们看到其中list中嵌套的list值都改变了，是因为里面的list为共享数据！</p>
+<p>我们创建name的时候，python在内存里面的一个地址存入了name，并且name里的list也是会被分配一个地址<br>但是我们在进行copy操作的时候，我们原封不动的取了name的元素作为新的list，但是原来name里面的list地址还是指向原先的<br>内部list地址，所以后面我们在对name的内部list进行更改的时候，同样name1中的内部list也会受到影响！</p>
+<p>我们利用python中的id方法来验证这点！<br>like$python3<br>Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)<br>[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin<br>Type “help”, “copyright”, “credits” or “license” for more information.</p>
+<p>list1 = [1,2,[1,2,3]]<br>list2 = list1.copy()</p>
+<p>id(list1)<br>4313896776<br>id(list2)<br>4313896456<br>id(list1[2])<br>4313896520<br>id(list2[2])<br>4313896520</p>
+<p>深COPY</p>
+<p>name = [‘alex’,’jack’,[1,2,3,34]]<br>name1 = name.deepcopy()<br>name1[0] = ‘ALEX’<br>name1[2][1] = 11111</p>
+<p>则完全copy一份数据</p>
+<p>import copy<br>list3 = copy.deepcopy(list1)<br>id(list3)<br>4314698952<br>id(list3[2])<br>4314754312</p>
+<p>Sort()方法在Python2和Python3中的不同</p>
+<p>Python3中不允许数字和字符串进行sort<br>Python2中是可以的，具体排序是按照对应的ASCII码进行排序，数字在前，字母在后</p>
+<p>index()返回下标<br>count()返回数量<br>extend()拓展<br>append()追加</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-入侵删除记录" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -783,68 +860,6 @@ int main(int argc, const char * argv[]) {
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Nmap初探" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/19/Nmap初探/" class="article-date">
-      <time datetime="2016-03-19T11:02:29.000Z" itemprop="datePublished">2016-03-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/19/Nmap初探/">Nmap初探</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  来这边信通工作了也快一个多月了，逐步习惯了工作的节奏，第一次从吉林出差回南京，</span><br><span class="line">原计划休息一小段时间，但是同事那边（国网要准备突击检查）忙不过来，So...</span><br><span class="line">周六周日也跟着加班了，和之前一样工作的内容很简单，主要是找人找设备比较麻烦，</span><br><span class="line">还有领导指导的要求又随时会变，比如今天突然就要求整理出系统中所有存活主机的IP</span><br><span class="line"></span><br><span class="line">我去，这么多IP怎么找...</span><br><span class="line">于是想起来以前用过一点的神器Nmap</span><br></pre></td></tr></table></figure>
-<h3 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  原本以为在OS X 系统中没有Nmap，于是我就搬到Kali Linux的生产环境中去搞，</span><br><span class="line">Damn！，最后在网上找到了快捷安装的方法</span><br><span class="line"></span><br><span class="line">具体<span class="string">'brew install nmap'</span>就好了 - -！</span><br></pre></td></tr></table></figure>
-<h3 id="今天的具体实战"><a href="#今天的具体实战" class="headerlink" title="今天的具体实战"></a>今天的具体实战</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">其实真的很简单，寻找内网存活主机的数量和IP地址只需要一道命令即可</span><br><span class="line"><span class="string">'nmap -sP 192.168.1.0-24'</span> 举这个例子（扫描所有一网段存活主机）</span><br><span class="line">拓展一下 nmap其实还支持文件输出 只需要在后面加参数 -oX 文件名.xml</span><br><span class="line">注意：前面是字母的o不是数字<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h3 id="拓展链接"><a href="#拓展链接" class="headerlink" title="拓展链接"></a>拓展链接</h3><p><a href="https://nmap.org/" target="_blank" rel="external">Nmap</a></p>
-<p><img src="http://7xs1w6.com1.z0.glb.clouddn.com/150581565.jpg" alt=""></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Information-Gathering/">Information Gathering</a></li></ul>
     </div>
 
       
