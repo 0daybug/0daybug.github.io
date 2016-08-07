@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Problems/" style="font-size: 10px;">Problems</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
+                        <a href="/tags/AIX/" style="font-size: 12.5px;">AIX</a> <a href="/tags/Attack/" style="font-size: 10px;">Attack</a> <a href="/tags/Google-Hack/" style="font-size: 10px;">Google Hack</a> <a href="/tags/HackingTools/" style="font-size: 10px;">HackingTools</a> <a href="/tags/Information-Gathering/" style="font-size: 10px;">Information Gathering</a> <a href="/tags/Learning-Scrapy/" style="font-size: 10px;">Learning Scrapy</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Metasploit/" style="font-size: 12.5px;">Metasploit</a> <a href="/tags/Penetration-Testing/" style="font-size: 15px;">Penetration Testing</a> <a href="/tags/Problems/" style="font-size: 10px;">Problems</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Socket/" style="font-size: 10px;">Socket</a> <a href="/tags/Understanding-Network-Hacks/" style="font-size: 20px;">Understanding Network Hacks</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/渗透测试/" style="font-size: 17.5px;">渗透测试</a>
                     </div>
                 </section>
                 
@@ -219,6 +219,78 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Socket" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/09/Socket/" class="article-date">
+      <time datetime="2016-06-09T11:06:21.000Z" itemprop="datePublished">2016-06-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/09/Socket/">Socket</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><p>import socket</p>
+<p>HOST = ‘localhost’<br>PORT = 1337</p>
+<p>s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>s.bind((HOST, PORT))<br>s.listen(1)</p>
+<p>conn, addr = s.accept()<br>print ‘Connected by’, addr</p>
+<p>while 1:<br>    data = conn.recv(1024)<br>    if not data:break<br>    print(data)<br>    conn.send(data)</p>
+<p>conn.close()</p>
+<h2 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h2><p>import socket</p>
+<p>HOST = ‘localhost’<br>PORT = 1337</p>
+<p>s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>s.connect((HOST, PORT))</p>
+<p>string1 = raw_input(‘pls enter something:’)<br>s.send(string1)<br>data = s.recv(1024)</p>
+<p>s.close()<br>print ‘Received’, repr(data)</p>
+<h2 id="Enable-ssh-on-OS-X"><a href="#Enable-ssh-on-OS-X" class="headerlink" title="Enable ssh on OS X"></a>Enable ssh on OS X</h2><p>The Apple Mac OS X operating system has SSH installed by default<br>but the SSH daemon is not enabled. This means you can’t login<br>remotely or do remote copies until you enable it.</p>
+<p>To enable it, go to ‘System Preferences’. Under ‘Internet &amp; Networking’<br>there is a ‘Sharing’ icon. Run that. In the list that appears, check the<br>‘Remote Login’ option.</p>
+<p>This starts the SSH daemon immediately and you can remotely login using<br> your username. The ‘Sharing’ window shows at the bottom the name and IP<br> address to use. You can also find this out using ‘whoami’ and ‘ifconfig’<br> from the Terminal application.</p>
+<p> so you can scp file like this on Kali Linux<br> scp Socket* like@192.168.1.110:~</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-List-in-Python" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -801,65 +873,6 @@ int main(int argc, const char * argv[]) {
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS学习/">iOS学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux禁Ping实现方案" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/24/Linux禁Ping实现方案/" class="article-date">
-      <time datetime="2016-03-24T03:18:19.000Z" itemprop="datePublished">2016-03-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/24/Linux禁Ping实现方案/">Linux禁Ping实现方案</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="更改文件方法"><a href="#更改文件方法" class="headerlink" title="更改文件方法"></a>更改文件方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个方法需要root权限</span><br><span class="line">禁止<span class="string">'echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br><span class="line">恢复<span class="string">'echo 0 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all'</span></span><br></pre></td></tr></table></figure>
-<h3 id="利用iptables方法"><a href="#利用iptables方法" class="headerlink" title="利用iptables方法"></a>利用iptables方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">禁止<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j DROP'</span></span><br><span class="line">恢复<span class="string">'iptables -I INPUT -i eth0 -p icmp -s 0/0 -d 0/0 -j ACCEPT'</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
 
       
